@@ -1,4 +1,4 @@
-z// Read from serial port in non-canonical mode
+// Read from serial port in non-canonical mode
 //
 // Modified by: Eduardo Nuno Almeida [enalmeida@fe.up.pt]
 
@@ -66,8 +66,8 @@ int main(int argc, char *argv[])
 
     // Set input mode (non-canonical, no echo,...)
     newtio.c_lflag = 0;
-    newtio.c_cc[VTIME] = 0; // Inter-character timer unused
-    newtio.c_cc[VMIN] = 5;  // Blocking read until 5 chars received
+    newtio.c_cc[VTIME] = 1; // Inter-character timer unused
+    newtio.c_cc[VMIN] = 0;  // Blocking read until 5 chars received
 
     // VTIME e VMIN should be changed in order to protect with a
     // timeout the reception of the following character(s)
@@ -90,26 +90,27 @@ int main(int argc, char *argv[])
 
     // Loop for input
     unsigned char buf[BUF_SIZE + 1] = {0}; // +1: Save space for the final '\0' char
-    int bytes;
+    int bytes, i;
     while (STOP == FALSE)
     {
         // Returns after a char have been input
         bytes = read(fd, buf+i, 1);
-        if (bytes >0) {
-            printf(":%s:%d\n", buf, bytes);
+        // printf("Running\n");
+        if (bytes > 0) {
+            printf("Im here\n");
+            i++;
             if (buf[i] == '\0') {
-                i++ 
                 STOP = TRUE;
+                printf(":%s:%d\n", buf, bytes);
             }
         }
     }
-    
-    
+
     //write on the serial port
     sleep(1);
-    
-    bytes = write(fd, buf, strlen(buf+)+1);
-    
+
+    bytes = write(fd, buf, strlen(buf)+1);
+
     // The while() cycle should be changed in order to respect the specifications
     // of the protocol indicated in the Lab guide
 

@@ -97,12 +97,13 @@ int main(int argc, char *argv[])
     if((result = gets(buf)) == NULL){
       printf("Error");
     }
-    else printf("%s\n", buf);
+    // else printf("%s\n", buf);
+    // else printf("%i\n", strlen(buf));
 
     // In non-canonical mode, '\n' does not end the writing.
     // Test this condition by placing a '\n' in the middle of the buffer.
     // The whole buffer must be sent even with the '\n'.
-
+    buf[strlen(buf)] = '\0';
     int bytes = write(fd, buf, strlen(buf)+1);
     printf("%d bytes written\n", bytes);
 
@@ -116,13 +117,13 @@ int main(int argc, char *argv[])
     {
       // Returns after 1 chars has been read
       int bytes = read(fd, fromSerial+i, 1);
-      
+
       if(bytes > 0){
+        i++;
         if(fromSerial[i] =='\0'){
-            i++;
             STOP = TRUE;
+            printf(":%s:%d\n", fromSerial, bytes);
         }
-        printf(":%s:%d\n", fromSerial, bytes);
       }
     }
 
