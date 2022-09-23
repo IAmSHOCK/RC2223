@@ -90,19 +90,17 @@ int main(int argc, char *argv[])
 
     // Loop for input
     unsigned char buf[BUF_SIZE + 1] = {0}; // +1: Save space for the final '\0' char
-    int bytes, i;
+    int bytes, i = 0;
     while (STOP == FALSE)
     {
         // Returns after a char have been input
         bytes = read(fd, buf+i, 1);
-        // printf("Running\n");
         if (bytes > 0) {
-            printf("Im here\n");
-            i++;
             if (buf[i] == '\0') {
                 STOP = TRUE;
                 printf(":%s:%d\n", buf, bytes);
             }
+            i++;
         }
     }
 
