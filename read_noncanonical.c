@@ -25,6 +25,54 @@
 
 volatile int STOP = FALSE;
 
+int llopen(int fd)
+{
+  unsigned char buf[BUF_SIZE];
+  unsigned char info[3];
+  unsigned char SET[5];
+  unsigned char UA[5];
+  SET[0] = FLAG;
+	SET[1] = A_emiter;
+	SET[2] = setF;
+	SET[3] = SET[1] ^ SET[2];
+	SET[4] = FLAG;
+
+	UA[0] = FLAG;
+	UA[1] = A_receiver;
+	UA[2] = uaF;
+	UA[3] = UA[1] ^ UA[2];
+	UA[4] = FLAG;
+
+  int curr_state = 0;
+
+  int i = 0;
+  while(curr_state < 5){
+    int bytes = read(fd, buf+i, 1);
+    if (bytes > 0) {
+      curr_state = stateMachine(buf[i], curr_state, SET);
+
+      switch(curr_state){
+        case 1:
+          info[0] = buf[i];
+          break;
+        case 2:
+          info[1] = buf[i];
+          break;
+        case 3:
+          info[2] = buf[i];
+          break;
+      }
+      i++;
+    }
+  }
+  if(curr_state == 5){
+    printf("info: %x %x %x", info[0], info[1], info[2]);
+    printf("SET received\n");
+    write(fd, UA, 5);
+    printf("UA sent\n");
+  }
+}
+
 int main(int argc, char *argv[])
 {
   // Program usage: Uses either COM1 or COM2
@@ -106,23 +154,4 @@ int main(int argc, char *argv[])
   close(fd);
 
   return 0;
-}
-
-int llopen(int fd)
-{
-  unsigned char SET[5];
-  unsigned char UA[5];
-  SET[0] = FLAG;
-	SET[1] = FLAG_A;
-	SET[2] = setF;
-	SET[3] = SET[1] ^ SET[2];
-	SET[4] = FLAG;
-
-	UA[0] = FLAG;
-	UA[1] = FLAG_A;
-	UA[2] = uaF;
-	UA[3] = UA[1] ^ UA[2];
-	UA[4] = FLAG;
-
-  state_machine();
 }
