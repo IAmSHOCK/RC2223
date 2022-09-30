@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o write write_noncanonical.c && ./write /dev/ttyS10
+gcc -Wall -o write write_noncanonical.c stateMachine.c  && ./write /dev/ttyS10

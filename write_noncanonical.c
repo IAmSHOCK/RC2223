@@ -20,9 +20,46 @@
 #define FALSE 0
 #define TRUE 1
 
-#define BUF_SIZE 1024
+#define BUF_SIZE 256
 
 volatile int STOP = FALSE;
+
+int llopen(int fd)
+{
+  unsigned char buf[BUF_SIZE];
+  unsigned char SET[5];
+  unsigned char UA[5];
+
+  SET[0] = FLAG;
+	SET[1] = A_emiter;
+	SET[2] = setF;
+	SET[3] = SET[1] ^ SET[2];
+	SET[4] = FLAG;
+
+	UA[0] = FLAG;
+	UA[1] = A_receiver;
+	UA[2] = uaF;
+	UA[3] = UA[1] ^ UA[2];
+	UA[4] = FLAG;
+
+  int bytes = write(fd, SET, 5);
+  if (bytes > 0) printf("SET sent\n");
+
+  int curr_state = 0;
+
+  int i = 0;
+  while(curr_state < 5){
+    int bytes = read(fd, buf+i, 1);
+    if (bytes > 0) {
+      curr_state = stateMachine(buf[i], curr_state, UA);
+    }
+  }
+  if(curr_state == 5){
+    printf("UA received\n");
+    return 0;
+  }
+  return -1;
+}
 
 int main(int argc, char *argv[])
 {
@@ -89,50 +126,11 @@ int main(int argc, char *argv[])
   }
 
   printf("New termios structure set\n");
-
-  // Create string to send
-  unsigned char buf[BUF_SIZE + 1] = {0};
-
-  unsigned char SET[5];
-  SET[0] = FLAG;
-  SET[1] = A_emiter;
-  SET[2] = setF;
-  SET[3] = SET[1] ^ SET[2];
-  SET[4] = FLAG;
-
   // In non-canonical mode, '\n' does not end the writing.
   // Test this condition by placing a '\n' in the middle of the buffer.
   // The whole buffer must be sent even with the '\n'.
 
-  int bytes = write(fd, SET, 5);
-  printf("%d bytes written\n", bytes);
-
-  // Wait until all bytes have been written to the serial port
-  sleep(1);
-
-  // Read from receiver
-  unsigned char fromSerial[BUF_SIZE + 1] = {0};
-  int i = 0;
-  while (STOP == FALSE)
-  {
-    // Returns after a char have been input
-    bytes = read(fd, buf + i, 1);
-    if (bytes > 0)
-    {
-      if (buf[i] == '\0')
-      {
-        STOP = TRUE;
-        printf(":%s:%d\n", buf, bytes);
-      }
-      i++;
-    }
-  }
-  // Restore the old port settings
-  if (tcsetattr(fd, TCSANOW, &oldtio) == -1)
-  {
-    perror("tcsetattr");
-    exit(-1);
-  }
+  int result = llopen(fd);
 
   close(fd);
 

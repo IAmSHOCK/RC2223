@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o read read_noncanonical.c && ./read /dev/ttyS11
+gcc -Wall -o read read_noncanonical.c stateMachine.c && ./read /dev/ttyS11

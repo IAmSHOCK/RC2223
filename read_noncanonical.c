@@ -21,14 +21,13 @@
 #define FALSE 0
 #define TRUE 1
 
-#define BUF_SIZE 1024
+#define BUF_SIZE 256
 
 volatile int STOP = FALSE;
 
 int llopen(int fd)
 {
   unsigned char buf[BUF_SIZE];
-  unsigned char info[3];
   unsigned char SET[5];
   unsigned char UA[5];
   SET[0] = FLAG;
@@ -50,27 +49,15 @@ int llopen(int fd)
     int bytes = read(fd, buf+i, 1);
     if (bytes > 0) {
       curr_state = stateMachine(buf[i], curr_state, SET);
-
-      switch(curr_state){
-        case 1:
-          info[0] = buf[i];
-          break;
-        case 2:
-          info[1] = buf[i];
-          break;
-        case 3:
-          info[2] = buf[i];
-          break;
-      }
-      i++;
     }
   }
   if(curr_state == 5){
-    printf("info: %x %x %x", info[0], info[1], info[2]);
     printf("SET received\n");
     write(fd, UA, 5);
     printf("UA sent\n");
+    return 0;
   }
+  return -1;
 }
 
 int main(int argc, char *argv[])
