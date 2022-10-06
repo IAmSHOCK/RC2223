@@ -1,19 +1,9 @@
-// Write to serial port in non-canonical mode
-//
-// Modified by: Eduardo Nuno Almeida [enalmeida@fe.up.pt]
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <termios.h>
-#include <unistd.h>
+
 #include "macros.h"
+#include "write_noncanonical.h"
+#include "stateMachine.h"
 
-// Baudrate settings are defined in <asm/termbits.h>, which is
-// included by <termios.h>
 #define BAUDRATE B38400
 #define _POSIX_SOURCE 1 // POSIX compliant source
 
@@ -24,12 +14,20 @@
 
 volatile int STOP = FALSE;
 
-int llopen_writer(int fd)
+unsigned char SET[5];
+unsigned char UA[5];
+
+int alarm_flag = 0;
+int attempts = 0;
+int is_connected = 0;
+
+int llopen_writer()
 {
   // TODO: falta implementar o timer e o contador de tentativas
+
+  (void)signal(SIGALRM, timeout);
   unsigned char buf[BUF_SIZE];
-  unsigned char SET[5];
-  unsigned char UA[5];
+
 
   SET[0] = FLAG;
 	SET[1] = A_emiter;
@@ -43,7 +41,11 @@ int llopen_writer(int fd)
 	UA[3] = UA[1] ^ UA[2];
 	UA[4] = FLAG;
 
-  int bytes = write(fd, SET, 5);
+  int bytes;
+  if(!is_connected && attempts < MAXATTEMPTS){
+    bytes = write(fd, SET, 5);
+    alarm(3);
+  }
   if (bytes > 0) printf("SET sent\n");
 
   int curr_state = 0;
@@ -57,10 +59,34 @@ int llopen_writer(int fd)
   }
   if(curr_state == 5){
     printf("UA received\n");
+    is_connected = 1;
     return 0;
   }
   return -1;
 }
+
+void callAlarm()
+{
+  if (!alarm_flag)
+    write(fd, SET, 5);
+  else
+    write(fd, message, message_size);
+  alarm(3);
+}
+
+void timeout()
+{
+  //alarm handler
+  attempts++;
+
+  if(attempts > MAXATTEMPTS){
+    printf("Connection failed\n");
+    exit(0);
+  }
+  printf("Attempt number = %d\n", attempts);
+  callAlarm();
+}
+
 
 int trama_flag = 0;
 
@@ -68,9 +94,9 @@ int trama_flag = 0;
 int llwrite(int fd, unsigned char * buff, int length) {
   // TODO: falta implementar o timer e o contador de tentativas
 
-
-  char* message = (unsigned char *)malloc((length + 6) * sizeof(unsigned char));
-  int message_size = length + 6;
+  alarm_flag = 1;
+  message = (unsigned char *)malloc((length + 6) * sizeof(unsigned char));
+  message_size = length + 6;
   message[0] = FLAG;
   message[1] = A_emiter;
   message[2] = (trama_flag == 0) ? C0 : C1;
@@ -103,10 +129,6 @@ int llwrite(int fd, unsigned char * buff, int length) {
       j++;
       break;
     }
-
-    
-
-
   }
 }
 
@@ -127,7 +149,7 @@ int main(int argc, char *argv[])
 
   // Open serial port device for reading and writing, and not as controlling tty
   // because we don't want to get killed if linenoise sends CTRL-C.
-  int fd = open(serialPortName, O_RDWR | O_NOCTTY);
+  fd = open(serialPortName, O_RDWR | O_NOCTTY);
 
   if (fd < 0)
   {
@@ -171,7 +193,7 @@ int main(int argc, char *argv[])
   // Test this condition by placing a '\n' in the middle of the buffer.
   // The whole buffer must be sent even with the '\n'.
 
-  int result = llopen(fd);
+  int result = llopen_writer();
 
   close(fd);
 

@@ -16,3 +16,5 @@
 #define C1 0x40
 #define FLAG_STUFF 0x5E
 #define ESC_STUFF 0x5D
+
+#define MAXATTEMPTS 5

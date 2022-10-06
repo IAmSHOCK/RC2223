@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
   printf("New termios structure set\n");
 
   // Loop for input
-  int result = llopen(fd);
+  int result = llopen_reader(fd);
 
   // The while() cycle should be changed in order to respect the specifications
   // of the protocol indicated in the Lab guide
