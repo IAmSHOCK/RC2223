@@ -25,7 +25,7 @@
 
 volatile int STOP = FALSE;
 
-int llopen(int fd)
+int llopen_reader(int fd)
 {
   unsigned char buf[BUF_SIZE];
   unsigned char SET[5];

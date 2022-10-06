@@ -24,8 +24,9 @@
 
 volatile int STOP = FALSE;
 
-int llopen(int fd)
+int llopen_write(int fd)
 {
+  // TODO: falta implementar o timer e o contador de tentativas
   unsigned char buf[BUF_SIZE];
   unsigned char SET[5];
   unsigned char UA[5];
