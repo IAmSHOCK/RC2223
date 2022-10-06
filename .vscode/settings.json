@@ -6,7 +6,8 @@
     "reader.h": "c",
     "strings.h": "c",
     "writer.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "write_noncanonical.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

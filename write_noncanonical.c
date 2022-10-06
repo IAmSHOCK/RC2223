@@ -3,6 +3,7 @@
 #include "macros.h"
 #include "write_noncanonical.h"
 #include "stateMachine.h"
+#include "utilities.h"
 
 #define BAUDRATE B38400
 #define _POSIX_SOURCE 1 // POSIX compliant source
@@ -91,7 +92,7 @@ int trama_flag = 0;
 
 
 int llwrite(int fd, unsigned char *buff, int length) {
-  // TODO: falta implementar o timer e o contador de tentativas
+  startCounter();
   attempts = 0;
   alarm_flag = 1;
   message = (unsigned char *)malloc((length + 6) * sizeof(unsigned char));
