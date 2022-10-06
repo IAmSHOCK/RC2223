@@ -24,7 +24,7 @@
 
 volatile int STOP = FALSE;
 
-int llopen_write(int fd)
+int llopen_writer(int fd)
 {
   // TODO: falta implementar o timer e o contador de tentativas
   unsigned char buf[BUF_SIZE];
@@ -60,6 +60,54 @@ int llopen_write(int fd)
     return 0;
   }
   return -1;
+}
+
+int trama_flag = 0;
+
+
+int llwrite(int fd, unsigned char * buff, int length) {
+  // TODO: falta implementar o timer e o contador de tentativas
+
+
+  char* message = (unsigned char *)malloc((length + 6) * sizeof(unsigned char));
+  int message_size = length + 6;
+  message[0] = FLAG;
+  message[1] = A_emiter;
+  message[2] = (trama_flag == 0) ? C0 : C1;
+  message[3] = message[1] ^ message[2];
+
+  // byte stuffing
+  int j = 4;
+  for (int i = 0; i < length; i++) {
+    unsigned char c = buff[i];
+
+    switch (c)
+    {
+    case FLAG:
+      // byte stuff FLAG
+      message = (unsigned char *)realloc(message, ++message_size);
+      message[j] = ESC;
+      message[j + 1] = FLAG_STUFF;
+      j += 2;
+      break;
+
+    case ESC:
+      // byte stuff ESC
+      message = (unsigned char *)realloc(message, ++message_size);
+      message[j] = ESC;
+      message[j + 1] = ESC_STUFF;
+      j += 2;
+      break;
+    default:
+      message[j] = c;
+      j++;
+      break;
+    }
+
+    
+
+
+  }
 }
 
 int main(int argc, char *argv[])
@@ -109,14 +157,6 @@ int main(int argc, char *argv[])
   newtio.c_cc[VTIME] = 1; // Inter-character timer unused
   newtio.c_cc[VMIN] = 0;  // Blocking read until 5 chars received
 
-  // VTIME e VMIN should be changed in order to protect with a
-  // timeout the reception of the following character(s)
-
-  // Now clean the line and activate the settings for the port
-  // tcflush() discards data written to the object referred to
-  // by fd but not transmitted, or data received but not read,
-  // depending on the value of queue_selector:
-  //   TCIFLUSH - flushes data received but not read.
   tcflush(fd, TCIOFLUSH);
 
   // Set new port settings
