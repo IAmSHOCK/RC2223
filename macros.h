@@ -6,8 +6,10 @@
 #define setF 0x03
 #define DISC 0x0B
 #define uaF 0x07
-#define RR 0x05
-#define REJ 0x01
+#define RR0 0x05
+#define RR1 0x85
+#define REJ0 0x01
+#define REJ1 0x81
 #define A_emiter 0x03
 #define A_receiver 0x01
 

@@ -80,7 +80,6 @@ void timeout()
   attempts++;
 
   if(attempts > MAXATTEMPTS){
-    printf("Connection failed\n");
     exit(0);
   }
   printf("Attempt number = %d\n", attempts);
@@ -91,9 +90,9 @@ void timeout()
 int trama_flag = 0;
 
 
-int llwrite(int fd, unsigned char * buff, int length) {
+int llwrite(int fd, unsigned char *buff, int length) {
   // TODO: falta implementar o timer e o contador de tentativas
-
+  attempts = 0;
   alarm_flag = 1;
   message = (unsigned char *)malloc((length + 6) * sizeof(unsigned char));
   message_size = length + 6;
@@ -107,8 +106,7 @@ int llwrite(int fd, unsigned char * buff, int length) {
   for (int i = 0; i < length; i++) {
     unsigned char c = buff[i];
 
-    switch (c)
-    {
+    switch (c) {
     case FLAG:
       // byte stuff FLAG
       message = (unsigned char *)realloc(message, ++message_size);
@@ -130,7 +128,101 @@ int llwrite(int fd, unsigned char * buff, int length) {
       break;
     }
   }
+
+    int BCC2_size = 1;
+    int rej = 0;
+    do {
+      unsigned char *BCC2Stuffed;
+      unsigned char BCC2 = getBCC2(buff, length);
+      BCC2Stuffed = stuffing(BCC2, &BCC2_size);
+      if (BCC2_size == 1) {
+        message[j] = BCC2;
+        //printf("BCC2 normal\n");
+      }
+      else {
+        message = (unsigned char *)realloc(message, ++message_size);
+        message[j] = BCC2Stuffed[0];
+        message[j + 1] = BCC2Stuffed[1];
+        j++;
+      }
+
+      message[j+1] = FLAG; // end of frame
+      write(fd, message, message_size);
+
+      unsigned char CTRL[5];
+      CTRL[0] = FLAG;
+      CTRL[1] = A_emiter;
+      CTRL[2] = RR0; // its not used
+      CTRL[3] = CTRL[1] ^ CTRL[2];
+      CTRL[4] = FLAG;
+
+      alarm(3);
+
+      unsigned char c = writer_readMessage(fd, CTRL);
+
+      if ((c == RR0 && trama_flag == 1) || (c == RR1 && trama_flag == 0)) {
+        rej = 0;
+        attempts = 0;
+        trama_flag = (trama_flag+1) % 2;
+        if(c == RR0){
+          printf("RR0 received\n");
+        }
+        else{
+          printf("RR1 received\n");
+        }
+
+        break;
+      }
+      else if ((c == REJ0) || (c == REJ1)) { //rejected
+        rej = 1;
+        if(c == REJ0){
+          printf("REJ0 received\n");
+        }
+        else if (c == REJ1){
+          printf("REJ1 received\n");
+        }
+      }
+      else {
+        printf("Invalid data received!\n");
+      }
+    } while (((!is_connected) && (attempts < MAXATTEMPTS)) || rej);
+  printf("Transfer Rate: %.1f Kb/s\n", getTransferRate(length));
 }
+
+unsigned char getBCC2(unsigned char *buf, int size)
+{
+  unsigned char BCC2 = buf[0];
+  int i;
+  for (i = 1; i < size; i++)
+  {
+    BCC2 ^= buf[i];
+  }
+  return BCC2;
+}
+
+unsigned char *stuffing(unsigned char c, int *size)
+{
+  //stuffing of BCC2
+  unsigned char *returnValue;
+  returnValue = (unsigned char *)malloc(2 * sizeof(unsigned char *));
+
+  switch (c)
+  {
+  case FLAG:
+    returnValue[0] = ESC;
+    returnValue[1] = FLAG_STUFF;
+    (*size)++;
+    break;
+  case ESC:
+    returnValue[0] = ESC;
+    returnValue[1] = ESC_STUFF;
+    (*size)++;
+    break;
+  }
+
+  return returnValue;
+}
+
 
 int main(int argc, char *argv[])
 {
