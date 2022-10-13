@@ -18,9 +18,31 @@ long int convertSize(int res) {
     size = sizeof(c);
     return size;
  }
+
+ long int convertHexa(int res) {
+  size = convertSize(size);
+  char hexaDeciNum[];
+  int i = 0;
+  while(n !=0) {
+    int temp = 0;
+    temp = n % 16;
+    
+    if (temp < 10) {
+      hexaDeciNum[i] = temp +48;
+      i++;
+    }
+    else {
+      hexaDeciNum[i] = temp +55;
+      i++;
+    }
+    n = n / 16;
+    
+  }
+  
+ }
  void startPackage() {
      size = convertSize(res);
-     char arr[2048];
+     char arr[];
      arr[0] = 1;
      arr[1] = 0;
      arr[2] = size;
