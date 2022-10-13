@@ -10,17 +10,19 @@
      fseek(fp, 0L, SEEK_END);
      long int res = ftell(fp);
      fclose(fp);
+  
+     return res;
  }
 
-long int convertSize(int res) {
-    findSize(file_name);
+long int convertSize(file_name) {
+    a =findSize(file_name);
     char c = a + '0';
     size = sizeof(c);
     return size;
  }
 
  long int convertHexa(int res) {
-  size = convertSize(size);
+  binary_size = convertSize(file_name);
   char hexaDeciNum[];
   int i = 0;
   while(n !=0) {
