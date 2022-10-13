@@ -44,35 +44,11 @@ long int convertSize(file_name) {
   }
 
  }
- void startPackage() {
+ void controlPackage(unsigned char controlByte) {
      size = convertSize(res);
      hexaSize = convertHexa(res);
      char arr[];
-     arr[0] = 2;
-     if(arr[1] = 0) {
-        arr[4] = 1;
-     }
-     arr[2] = size;
-     arr[3] =hexaSize;
-
-     //missing arr[5] & arr[6];  
-
-     else if(arr[1] = 1) {
-        arr[4] = 4;
-     }
-
-    //missing arr[2] & arr[3];  
-
-     arr[5] = size;
-     arr[6] =hexaSize;
-
- }
-
- void endPackage() {
-     size = convertSize(res);
-     hexaSize = convertHexa(res);
-     char arr[];
-     arr[0] = 3;
+     arr[0] = controlByte;
      if(arr[1] = 0) {
         arr[4] = 1;
      }
