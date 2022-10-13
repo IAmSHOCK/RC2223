@@ -1,6 +1,6 @@
 
  
- #include <stdio.h>
+  #include <stdio.h>
  long int findSize(char file_name[]) {
      FILE* fp =fopen(file_name, "r");
      if (fp == NULL) {
@@ -39,22 +39,65 @@ long int convertSize(file_name) {
     }
     n = n / 16;
     
+    int i = atoi(hexaDeciNum);
+    return i;
   }
-  
+
  }
  void startPackage() {
      size = convertSize(res);
+     hexaSize = convertHexa(res);
      char arr[];
-     arr[0] = 1;
-     arr[1] = 0;
+     arr[0] = 2;
+     if(arr[1] = 0) {
+        arr[4] = 1;
+     }
      arr[2] = size;
-     arr[3] = ;    
+     arr[3] =hexaSize;
+
+     //missing arr[5] & arr[6];  
+
+     else if(arr[1] = 1) {
+        arr[4] = 4;
+     }
+
+    //missing arr[2] & arr[3];  
+
+     arr[5] = size;
+     arr[6] =hexaSize;
+
+ }
+
+ void endPackage() {
+     size = convertSize(res);
+     hexaSize = convertHexa(res);
+     char arr[];
+     arr[0] = 3;
+     if(arr[1] = 0) {
+        arr[4] = 1;
+     }
+     arr[2] = size;
+     arr[3] =hexaSize;
+
+     //missing arr[5] & arr[6];  
+
+     else if(arr[1] = 1) {
+        arr[4] = 4;
+     }
+
+    //missing arr[2] & arr[3];  
+
+     arr[5] = size;
+     arr[6] =hexaSize;
+
  }
 
 void sendifle(char file_name[]) {
-
+    startPackage();
     while (file_name != EOF) {
 
     }   
+
+    endPackage();
 }
 
