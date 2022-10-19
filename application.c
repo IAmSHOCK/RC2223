@@ -2,8 +2,11 @@
  
   #include <stdio.h>
   #include "link_layer.h"
- long int findSize(char file_name[]) {
-     FILE* fp =fopen(file_name, "r");
+
+  #define MAX_PAYLOAD_SIZE 1000
+
+ long int findSize(char fileName[]) {
+     FILE* fp =fopen(fileName, "r");
      if (fp == NULL) {
          printf("File not found!\n");
          return -1;
@@ -15,60 +18,42 @@
      return res;
  }
 
-long int convertSize(file_name) {
-    a =findSize(file_name);
-    char c = a + '0';
-    size = sizeof(c);
-    return size;
- }
-
- long int convertHexa(int res) {
-  binary_size = convertSize(file_name);
-  char hexaDeciNum[];
+int nBytes_to_represent(int n) {
   int i = 0;
-  while(n !=0) {
-    int temp = 0;
-    temp = n % 16;
-    
-    if (temp < 10) {
-      hexaDeciNum[i] = temp +48;
-      i++;
-    }
-    else {
-      hexaDeciNum[i] = temp +55;
-      i++;
-    }
-    n = n / 16;
-    
-    int i = atoi(hexaDeciNum);
-    return i;
+  while (n > 0) {
+    n = n >> 8;
+    i++; 
   }
+  return i;
+}
 
  }
- void controlPackage(unsigned char controlByte) {
-     size = convertSize(res);
-     hexaSize = convertHexa(res);
-     char arr[];
+ int controlPackage(unsigned char * arr, unsigned char controlByte, int fileSize, char* fileName) {
+     
+     int size = findSize(fileName);
+     
+     char arr[MAX_PAYLOAD_SIZE];
+     int aux = fileSize;
      arr[0] = controlByte;
-     if(arr[1] = 0) {
-        arr[4] = 1;
-     }
+     arr[1] = 0x00;
      arr[2] = size;
-     arr[3] =hexaSize;
-
-     //missing arr[5] & arr[6];  
-
-     else if(arr[1] = 1) {
-        arr[4] = 4;
+     for (int i = 0; i < size; ++i) {
+        arr[3+i] = aux % 256;
+        aux /= 256:
      }
-
-    //missing arr[2] & arr[3];  
-
-     arr[5] = size;
-     arr[6] =hexaSize;
-
+     
+     int nxt = 3 + n;
+     arr[nxt] = 0x01;
+     arr[nxt+1] = strlen(fileName) + 1); // 4
+     int l = strlen(fileName +1);
+     for (int j = 0; j < strlen(fileName) +1; j++) { // x = 2;
+        arr[nxt + 2 + j] = fileName[j];
+     }
+     return 1;
  }
 
+void dataPacket() {
+}
 void sendifle(char file_name[]) {
     startPackage();
     while (file_name != EOF) {
