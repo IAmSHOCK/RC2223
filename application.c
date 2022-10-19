@@ -1,6 +1,7 @@
 
  
   #include <stdio.h>
+  #include "link_layer.h"
  long int findSize(char file_name[]) {
      FILE* fp =fopen(file_name, "r");
      if (fp == NULL) {
