@@ -26,8 +26,8 @@ int checkBCC2(unsigned char *packet, int size);
 
 // Global variables
 
-int fd;
-int expectedBCC;
+extern int fd_r;
+extern int expectedBCC;
 
 
 

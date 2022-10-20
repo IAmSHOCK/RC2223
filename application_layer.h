@@ -7,7 +7,7 @@ int status; /*TRANSMITTER | RECEIVER*/
 int size;
 }applicationLayer;
 
-applicationLayer app_layer;
+extern applicationLayer app_layer;
 
 #define PACKET_H_C      1       //Value of packet header Control
 

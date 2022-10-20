@@ -2,6 +2,7 @@
 #include "stateMachine.h"
 #include <signal.h>
 
+LinkLayer link_layer;
 int setTermios(int fd) {
   struct termios oldtio,newtio;
   if (tcgetattr(fd,&oldtio) == -1) { /* save current port settings */

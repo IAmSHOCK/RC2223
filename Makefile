@@ -2,10 +2,10 @@ SRC = application_layer.c data_link.c  stateMachine.c reader.c writer.c utilitie
 
 
 all:
-	gcc $(SRC) -Wall -o run
+	gcc $(SRC) -Wall -o serial
 
 debug:
-	gcc -g $(SRC) -Wall -o run
+	gcc -g $(SRC) -Wall -o serial
 
 clean:
-	rm run
+	rm serial

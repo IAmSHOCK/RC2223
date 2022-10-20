@@ -1,0 +1,2397 @@
+Choose a Baudrate: 
+1 - B1200
+2 - B2400
+3 - B4800
+4 - B19200
+5 - B38400
+6 - B115200
+Value: Choose a Packet Size: 
+1 - 32
+2 - 64
+3 - 128
+4 - 256
+5 - 512
+6 - 1024
+Value: Going to call data_writer
+New termios structure set
+Sent SET,waiting for receiver
+Attempt number=1
+Attempt number=2
+Attempt number=3
+Attempt number=4
+Received UA
+fileSize: 10968
+RR1 received
+Transfer Rate: 82.8 Kb/s
+
+===============
+Progress: 0%
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+REJ0 received
+RR0 received
+Transfer Rate: 0.9 Kb/s
+Sent packet number: 1
+
+===============
+Progress: 0%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 2
+
+===============
+Progress: 0%
+RR0 received
+Transfer Rate: 336.4 Kb/s
+Sent packet number: 3
+
+===============
+Progress: 1%
+RR1 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 4
+
+===============
+Progress: 1%
+RR0 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 5
+
+===============
+Progress: 1%
+RR1 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 6
+
+===============
+Progress: 2%
+RR0 received
+Transfer Rate: 313.0 Kb/s
+Sent packet number: 7
+
+===============
+Progress: 2%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 8
+
+===============
+Progress: 2%
+RR0 received
+Transfer Rate: 321.4 Kb/s
+Sent packet number: 9
+
+===============
+Progress: 2%
+RR1 received
+Transfer Rate: 371.1 Kb/s
+Sent packet number: 10
+
+===============
+Progress: 3%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 11
+
+===============
+Progress: 3%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 12
+
+===============
+Progress: 3%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 13
+
+===============
+Progress: 4%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 14
+
+===============
+Progress: 4%
+RR0 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 15
+
+===============
+Progress: 4%
+RR1 received
+Transfer Rate: 321.4 Kb/s
+Sent packet number: 16
+
+===============
+Progress: 4%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 17
+
+===============
+Progress: 5%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 18
+
+===============
+Progress: 5%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 19
+
+===============
+Progress: 5%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 20
+
+===============
+Progress: 6%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 21
+
+===============
+Progress: 6%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 22
+
+===============
+Progress: 6%
+RR0 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 23
+
+===============
+Progress: 7%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 24
+
+===============
+Progress: 7%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 25
+
+===============
+Progress: 7%
+RR1 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 26
+
+===============
+Progress: 7%
+RR0 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 27
+
+===============
+Progress: 8%
+RR1 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 28
+
+===============
+Progress: 8%
+RR0 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 29
+
+===============
+Progress: 8%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 30
+
+===============
+Progress: 9%
+RR0 received
+Transfer Rate: 330.3 Kb/s
+Sent packet number: 31
+
+===============
+Progress: 9%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 32
+
+===============
+Progress: 9%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 33
+
+===============
+Progress: 9%
+RR1 received
+Transfer Rate: 349.5 Kb/s
+Sent packet number: 34
+
+===============
+Progress: 10%
+RR0 received
+Transfer Rate: 279.1 Kb/s
+Sent packet number: 35
+
+===============
+Progress: 10%
+RR1 received
+Transfer Rate: 305.1 Kb/s
+Sent packet number: 36
+
+===============
+Progress: 10%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 37
+
+===============
+Progress: 11%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 38
+
+===============
+Progress: 11%
+RR0 received
+Transfer Rate: 283.5 Kb/s
+Sent packet number: 39
+
+===============
+Progress: 11%
+RR1 received
+Transfer Rate: 391.3 Kb/s
+Sent packet number: 40
+
+===============
+Progress: 11%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 41
+
+===============
+Progress: 12%
+RR1 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 42
+
+===============
+Progress: 12%
+RR0 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 43
+
+===============
+Progress: 12%
+RR1 received
+Transfer Rate: 297.5 Kb/s
+Sent packet number: 44
+
+===============
+Progress: 13%
+RR0 received
+Transfer Rate: 327.3 Kb/s
+Sent packet number: 45
+
+===============
+Progress: 13%
+RR1 received
+Transfer Rate: 318.6 Kb/s
+Sent packet number: 46
+
+===============
+Progress: 13%
+RR0 received
+Transfer Rate: 310.3 Kb/s
+Sent packet number: 47
+
+===============
+Progress: 14%
+RR1 received
+Transfer Rate: 226.4 Kb/s
+Sent packet number: 48
+
+===============
+Progress: 14%
+RR0 received
+Transfer Rate: 276.9 Kb/s
+Sent packet number: 49
+
+===============
+Progress: 14%
+RR1 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 50
+
+===============
+Progress: 14%
+RR0 received
+Transfer Rate: 264.7 Kb/s
+Sent packet number: 51
+
+===============
+Progress: 15%
+RR1 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 52
+
+===============
+Progress: 15%
+RR0 received
+Transfer Rate: 336.4 Kb/s
+Sent packet number: 53
+
+===============
+Progress: 15%
+RR1 received
+Transfer Rate: 288.0 Kb/s
+Sent packet number: 54
+
+===============
+Progress: 16%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 55
+
+===============
+Progress: 16%
+RR1 received
+Transfer Rate: 305.1 Kb/s
+Sent packet number: 56
+
+===============
+Progress: 16%
+RR0 received
+Transfer Rate: 318.6 Kb/s
+Sent packet number: 57
+
+===============
+Progress: 16%
+RR1 received
+Transfer Rate: 110.4 Kb/s
+Sent packet number: 58
+
+===============
+Progress: 17%
+RR0 received
+Transfer Rate: 270.7 Kb/s
+Sent packet number: 59
+
+===============
+Progress: 17%
+RR1 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 60
+
+===============
+Progress: 17%
+RR0 received
+Transfer Rate: 330.3 Kb/s
+Sent packet number: 61
+
+===============
+Progress: 18%
+RR1 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 62
+
+===============
+Progress: 18%
+RR0 received
+Transfer Rate: 339.6 Kb/s
+Sent packet number: 63
+
+===============
+Progress: 18%
+RR1 received
+Transfer Rate: 352.9 Kb/s
+Sent packet number: 64
+
+===============
+Progress: 18%
+RR0 received
+Transfer Rate: 356.4 Kb/s
+Sent packet number: 65
+
+===============
+Progress: 19%
+RR1 received
+Transfer Rate: 356.4 Kb/s
+Sent packet number: 66
+
+===============
+Progress: 19%
+RR0 received
+Transfer Rate: 339.6 Kb/s
+Sent packet number: 67
+
+===============
+Progress: 19%
+RR1 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 68
+
+===============
+Progress: 20%
+RR0 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 69
+
+===============
+Progress: 20%
+RR1 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 70
+
+===============
+Progress: 20%
+RR0 received
+Transfer Rate: 264.7 Kb/s
+Sent packet number: 71
+
+===============
+Progress: 21%
+RR1 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 72
+
+===============
+Progress: 21%
+RR0 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 73
+
+===============
+Progress: 21%
+RR1 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 74
+
+===============
+Progress: 21%
+RR0 received
+Transfer Rate: 339.6 Kb/s
+Sent packet number: 75
+
+===============
+Progress: 22%
+RR1 received
+Transfer Rate: 283.5 Kb/s
+Sent packet number: 76
+
+===============
+Progress: 22%
+RR0 received
+Transfer Rate: 305.1 Kb/s
+Sent packet number: 77
+
+===============
+Progress: 22%
+RR1 received
+Transfer Rate: 288.0 Kb/s
+Sent packet number: 78
+
+===============
+Progress: 23%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 79
+
+===============
+Progress: 23%
+RR1 received
+Transfer Rate: 310.3 Kb/s
+Sent packet number: 80
+
+===============
+Progress: 23%
+RR0 received
+Transfer Rate: 321.4 Kb/s
+Sent packet number: 81
+
+===============
+Progress: 23%
+RR1 received
+Transfer Rate: 310.3 Kb/s
+Sent packet number: 82
+
+===============
+Progress: 24%
+RR0 received
+Transfer Rate: 367.3 Kb/s
+Sent packet number: 83
+
+===============
+Progress: 24%
+RR1 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 84
+
+===============
+Progress: 24%
+RR0 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 85
+
+===============
+Progress: 25%
+RR1 received
+Transfer Rate: 367.3 Kb/s
+Sent packet number: 86
+
+===============
+Progress: 25%
+RR0 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 87
+
+===============
+Progress: 25%
+RR1 received
+Transfer Rate: 375.0 Kb/s
+Sent packet number: 88
+
+===============
+Progress: 25%
+RR0 received
+Transfer Rate: 292.7 Kb/s
+Sent packet number: 89
+
+===============
+Progress: 26%
+RR1 received
+Transfer Rate: 227.8 Kb/s
+Sent packet number: 90
+
+===============
+Progress: 26%
+RR0 received
+Transfer Rate: 223.6 Kb/s
+Sent packet number: 91
+
+===============
+Progress: 26%
+RR1 received
+Transfer Rate: 297.5 Kb/s
+Sent packet number: 92
+
+===============
+Progress: 27%
+RR0 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 93
+
+===============
+Progress: 27%
+RR1 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 94
+
+===============
+Progress: 27%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 95
+
+===============
+Progress: 28%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 96
+
+===============
+Progress: 28%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 97
+
+===============
+Progress: 28%
+RR1 received
+Transfer Rate: 439.0 Kb/s
+Sent packet number: 98
+
+===============
+Progress: 28%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 99
+
+===============
+Progress: 29%
+RR1 received
+Transfer Rate: 356.4 Kb/s
+Sent packet number: 100
+
+===============
+Progress: 29%
+RR0 received
+Transfer Rate: 333.3 Kb/s
+Sent packet number: 101
+
+===============
+Progress: 29%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 102
+
+===============
+Progress: 30%
+RR0 received
+Transfer Rate: 391.3 Kb/s
+Sent packet number: 103
+
+===============
+Progress: 30%
+RR1 received
+Transfer Rate: 315.8 Kb/s
+Sent packet number: 104
+
+===============
+Progress: 30%
+RR0 received
+Transfer Rate: 333.3 Kb/s
+Sent packet number: 105
+
+===============
+Progress: 30%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 106
+
+===============
+Progress: 31%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 107
+
+===============
+Progress: 31%
+RR1 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 108
+
+===============
+Progress: 31%
+RR0 received
+Transfer Rate: 244.9 Kb/s
+Sent packet number: 109
+
+===============
+Progress: 32%
+RR1 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 110
+
+===============
+Progress: 32%
+RR0 received
+Transfer Rate: 300.0 Kb/s
+Sent packet number: 111
+
+===============
+Progress: 32%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 112
+
+===============
+Progress: 32%
+RR0 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 113
+
+===============
+Progress: 33%
+RR1 received
+Transfer Rate: 439.0 Kb/s
+Sent packet number: 114
+
+===============
+Progress: 33%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 115
+
+===============
+Progress: 33%
+RR1 received
+Transfer Rate: 439.0 Kb/s
+Sent packet number: 116
+
+===============
+Progress: 34%
+RR0 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 117
+
+===============
+Progress: 34%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 118
+
+===============
+Progress: 34%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 119
+
+===============
+Progress: 35%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 120
+
+===============
+Progress: 35%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 121
+
+===============
+Progress: 35%
+RR1 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 122
+
+===============
+Progress: 35%
+RR0 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 123
+
+===============
+Progress: 36%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 124
+
+===============
+Progress: 36%
+RR0 received
+Transfer Rate: 363.6 Kb/s
+Sent packet number: 125
+
+===============
+Progress: 36%
+RR1 received
+Transfer Rate: 220.9 Kb/s
+Sent packet number: 126
+
+===============
+Progress: 37%
+RR0 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 127
+
+===============
+Progress: 37%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 128
+
+===============
+Progress: 37%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 129
+
+===============
+Progress: 37%
+RR1 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 130
+
+===============
+Progress: 38%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 131
+
+===============
+Progress: 38%
+RR1 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 132
+
+===============
+Progress: 38%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 133
+
+===============
+Progress: 39%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 134
+
+===============
+Progress: 39%
+RR0 received
+Transfer Rate: 235.3 Kb/s
+Sent packet number: 135
+
+===============
+Progress: 39%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 136
+
+===============
+Progress: 39%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 137
+
+===============
+Progress: 40%
+RR1 received
+Transfer Rate: 356.4 Kb/s
+Sent packet number: 138
+
+===============
+Progress: 40%
+RR0 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 139
+
+===============
+Progress: 40%
+RR1 received
+Transfer Rate: 333.3 Kb/s
+Sent packet number: 140
+
+===============
+Progress: 41%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 141
+
+===============
+Progress: 41%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 142
+
+===============
+Progress: 41%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 143
+
+===============
+Progress: 42%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 144
+
+===============
+Progress: 42%
+RR0 received
+Transfer Rate: 467.5 Kb/s
+Sent packet number: 145
+
+===============
+Progress: 42%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 146
+
+===============
+Progress: 42%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 147
+
+===============
+Progress: 43%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 148
+
+===============
+Progress: 43%
+RR0 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 149
+
+===============
+Progress: 43%
+RR1 received
+Transfer Rate: 467.5 Kb/s
+Sent packet number: 150
+
+===============
+Progress: 44%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 151
+
+===============
+Progress: 44%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 152
+
+===============
+Progress: 44%
+RR0 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 153
+
+===============
+Progress: 44%
+RR1 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 154
+
+===============
+Progress: 45%
+RR0 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 155
+
+===============
+Progress: 45%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 156
+
+===============
+Progress: 45%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 157
+
+===============
+Progress: 46%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 158
+
+===============
+Progress: 46%
+RR0 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 159
+
+===============
+Progress: 46%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 160
+
+===============
+Progress: 46%
+RR0 received
+Transfer Rate: 473.7 Kb/s
+Sent packet number: 161
+
+===============
+Progress: 47%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 162
+
+===============
+Progress: 47%
+RR0 received
+Transfer Rate: 371.1 Kb/s
+Sent packet number: 163
+
+===============
+Progress: 47%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 164
+
+===============
+Progress: 48%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 165
+
+===============
+Progress: 48%
+RR1 received
+Transfer Rate: 371.1 Kb/s
+Sent packet number: 166
+
+===============
+Progress: 48%
+RR0 received
+Transfer Rate: 467.5 Kb/s
+Sent packet number: 167
+
+===============
+Progress: 49%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 168
+
+===============
+Progress: 49%
+RR0 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 169
+
+===============
+Progress: 49%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 170
+
+===============
+Progress: 49%
+RR0 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 171
+
+===============
+Progress: 50%
+RR1 received
+Transfer Rate: 363.6 Kb/s
+Sent packet number: 172
+
+===============
+Progress: 50%
+RR0 received
+Transfer Rate: 333.3 Kb/s
+Sent packet number: 173
+
+===============
+Progress: 50%
+RR1 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 174
+
+===============
+Progress: 51%
+RR0 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 175
+
+===============
+Progress: 51%
+RR1 received
+Transfer Rate: 157.9 Kb/s
+Sent packet number: 176
+
+===============
+Progress: 51%
+RR0 received
+Transfer Rate: 300.0 Kb/s
+Sent packet number: 177
+
+===============
+Progress: 51%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 178
+
+===============
+Progress: 52%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 179
+
+===============
+Progress: 52%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 180
+
+===============
+Progress: 52%
+RR0 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 181
+
+===============
+Progress: 53%
+RR1 received
+Transfer Rate: 310.3 Kb/s
+Sent packet number: 182
+
+===============
+Progress: 53%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 183
+
+===============
+Progress: 53%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 184
+
+===============
+Progress: 53%
+RR0 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 185
+
+===============
+Progress: 54%
+RR1 received
+Transfer Rate: 360.0 Kb/s
+Sent packet number: 186
+
+===============
+Progress: 54%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 187
+
+===============
+Progress: 54%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 188
+
+===============
+Progress: 55%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 189
+
+===============
+Progress: 55%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 190
+
+===============
+Progress: 55%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 191
+
+===============
+Progress: 56%
+RR1 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 192
+
+===============
+Progress: 56%
+RR0 received
+Transfer Rate: 349.5 Kb/s
+Sent packet number: 193
+
+===============
+Progress: 56%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 194
+
+===============
+Progress: 56%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 195
+
+===============
+Progress: 57%
+RR1 received
+Transfer Rate: 321.4 Kb/s
+Sent packet number: 196
+
+===============
+Progress: 57%
+RR0 received
+Transfer Rate: 135.3 Kb/s
+Sent packet number: 197
+
+===============
+Progress: 57%
+RR1 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 198
+
+===============
+Progress: 58%
+RR0 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 199
+
+===============
+Progress: 58%
+RR1 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 200
+
+===============
+Progress: 58%
+RR0 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 201
+
+===============
+Progress: 58%
+RR1 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 202
+
+===============
+Progress: 59%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 203
+
+===============
+Progress: 59%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 204
+
+===============
+Progress: 59%
+RR0 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 205
+
+===============
+Progress: 60%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 206
+
+===============
+Progress: 60%
+RR0 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 207
+
+===============
+Progress: 60%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 208
+
+===============
+Progress: 60%
+RR0 received
+Transfer Rate: 371.1 Kb/s
+Sent packet number: 209
+
+===============
+Progress: 61%
+RR1 received
+Transfer Rate: 439.0 Kb/s
+Sent packet number: 210
+
+===============
+Progress: 61%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 211
+
+===============
+Progress: 61%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 212
+
+===============
+Progress: 62%
+RR0 received
+Transfer Rate: 467.5 Kb/s
+Sent packet number: 213
+
+===============
+Progress: 62%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 214
+
+===============
+Progress: 62%
+RR0 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 215
+
+===============
+Progress: 63%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 216
+
+===============
+Progress: 63%
+RR0 received
+Transfer Rate: 433.7 Kb/s
+Sent packet number: 217
+
+===============
+Progress: 63%
+RR1 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 218
+
+===============
+Progress: 63%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 219
+
+===============
+Progress: 64%
+RR1 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 220
+
+===============
+Progress: 64%
+RR0 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 221
+
+===============
+Progress: 64%
+RR1 received
+Transfer Rate: 450.0 Kb/s
+Sent packet number: 222
+
+===============
+Progress: 65%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 223
+
+===============
+Progress: 65%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 224
+
+===============
+Progress: 65%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 225
+
+===============
+Progress: 65%
+RR1 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 226
+
+===============
+Progress: 66%
+RR0 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 227
+
+===============
+Progress: 66%
+RR1 received
+Transfer Rate: 349.5 Kb/s
+Sent packet number: 228
+
+===============
+Progress: 66%
+RR0 received
+Transfer Rate: 349.5 Kb/s
+Sent packet number: 229
+
+===============
+Progress: 67%
+RR1 received
+Transfer Rate: 313.0 Kb/s
+Sent packet number: 230
+
+===============
+Progress: 67%
+RR0 received
+Transfer Rate: 295.1 Kb/s
+Sent packet number: 231
+
+===============
+Progress: 67%
+RR1 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 232
+
+===============
+Progress: 67%
+RR0 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 233
+
+===============
+Progress: 68%
+RR1 received
+Transfer Rate: 305.1 Kb/s
+Sent packet number: 234
+
+===============
+Progress: 68%
+RR0 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 235
+
+===============
+Progress: 68%
+RR1 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 236
+
+===============
+Progress: 69%
+RR0 received
+Transfer Rate: 305.1 Kb/s
+Sent packet number: 237
+
+===============
+Progress: 69%
+RR1 received
+Transfer Rate: 315.8 Kb/s
+Sent packet number: 238
+
+===============
+Progress: 69%
+RR0 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 239
+
+===============
+Progress: 70%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 240
+
+===============
+Progress: 70%
+RR0 received
+Transfer Rate: 439.0 Kb/s
+Sent packet number: 241
+
+===============
+Progress: 70%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 242
+
+===============
+Progress: 70%
+RR0 received
+Transfer Rate: 500.0 Kb/s
+Sent packet number: 243
+
+===============
+Progress: 71%
+RR1 received
+Transfer Rate: 363.6 Kb/s
+Sent packet number: 244
+
+===============
+Progress: 71%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 245
+
+===============
+Progress: 71%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 246
+
+===============
+Progress: 72%
+RR0 received
+Transfer Rate: 461.5 Kb/s
+Sent packet number: 247
+
+===============
+Progress: 72%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 248
+
+===============
+Progress: 72%
+RR0 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 249
+
+===============
+Progress: 72%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 250
+
+===============
+Progress: 73%
+RR0 received
+Transfer Rate: 455.7 Kb/s
+Sent packet number: 251
+
+===============
+Progress: 73%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 252
+
+===============
+Progress: 73%
+RR0 received
+Transfer Rate: 467.5 Kb/s
+Sent packet number: 253
+
+===============
+Progress: 74%
+RR1 received
+Transfer Rate: 423.5 Kb/s
+Sent packet number: 254
+
+===============
+Progress: 74%
+RR0 received
+Transfer Rate: 428.6 Kb/s
+Sent packet number: 255
+
+===============
+Progress: 74%
+RR1 received
+Transfer Rate: 391.3 Kb/s
+Sent packet number: 256
+
+===============
+Progress: 74%
+RR0 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 257
+
+===============
+Progress: 75%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 258
+
+===============
+Progress: 75%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 259
+
+===============
+Progress: 75%
+RR1 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 260
+
+===============
+Progress: 76%
+RR0 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 261
+
+===============
+Progress: 76%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 262
+
+===============
+Progress: 76%
+RR0 received
+Transfer Rate: 367.3 Kb/s
+Sent packet number: 263
+
+===============
+Progress: 77%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 264
+
+===============
+Progress: 77%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 265
+
+===============
+Progress: 77%
+RR1 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 266
+
+===============
+Progress: 77%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 267
+
+===============
+Progress: 78%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 268
+
+===============
+Progress: 78%
+RR0 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 269
+
+===============
+Progress: 78%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 270
+
+===============
+Progress: 79%
+RR0 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 271
+
+===============
+Progress: 79%
+RR1 received
+Transfer Rate: 404.5 Kb/s
+Sent packet number: 272
+
+===============
+Progress: 79%
+RR0 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 273
+
+===============
+Progress: 79%
+RR1 received
+Transfer Rate: 409.1 Kb/s
+Sent packet number: 274
+
+===============
+Progress: 80%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 275
+
+===============
+Progress: 80%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 276
+
+===============
+Progress: 80%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 277
+
+===============
+Progress: 81%
+RR1 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 278
+
+===============
+Progress: 81%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 279
+
+===============
+Progress: 81%
+RR1 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 280
+
+===============
+Progress: 81%
+RR0 received
+Transfer Rate: 292.7 Kb/s
+Sent packet number: 281
+
+===============
+Progress: 82%
+RR1 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 282
+
+===============
+Progress: 82%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 283
+
+===============
+Progress: 82%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 284
+
+===============
+Progress: 83%
+RR0 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 285
+
+===============
+Progress: 83%
+RR1 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 286
+
+===============
+Progress: 83%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 287
+
+===============
+Progress: 84%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 288
+
+===============
+Progress: 84%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 289
+
+===============
+Progress: 84%
+RR1 received
+Transfer Rate: 283.5 Kb/s
+Sent packet number: 290
+
+===============
+Progress: 84%
+RR0 received
+Transfer Rate: 313.0 Kb/s
+Sent packet number: 291
+
+===============
+Progress: 85%
+RR1 received
+Transfer Rate: 363.6 Kb/s
+Sent packet number: 292
+
+===============
+Progress: 85%
+RR0 received
+Transfer Rate: 226.4 Kb/s
+Sent packet number: 293
+
+===============
+Progress: 85%
+RR1 received
+Transfer Rate: 248.3 Kb/s
+Sent packet number: 294
+
+===============
+Progress: 86%
+RR0 received
+Transfer Rate: 244.9 Kb/s
+Sent packet number: 295
+
+===============
+Progress: 86%
+RR1 received
+Transfer Rate: 255.3 Kb/s
+Sent packet number: 296
+
+===============
+Progress: 86%
+RR0 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 297
+
+===============
+Progress: 86%
+RR1 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 298
+
+===============
+Progress: 87%
+RR0 received
+Transfer Rate: 173.9 Kb/s
+Sent packet number: 299
+
+===============
+Progress: 87%
+RR1 received
+Transfer Rate: 302.5 Kb/s
+Sent packet number: 300
+
+===============
+Progress: 87%
+RR0 received
+Transfer Rate: 209.3 Kb/s
+Sent packet number: 301
+
+===============
+Progress: 88%
+RR1 received
+Transfer Rate: 330.3 Kb/s
+Sent packet number: 302
+
+===============
+Progress: 88%
+RR0 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 303
+
+===============
+Progress: 88%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 304
+
+===============
+Progress: 88%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 305
+
+===============
+Progress: 89%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 306
+
+===============
+Progress: 89%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 307
+
+===============
+Progress: 89%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 308
+
+===============
+Progress: 90%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 309
+
+===============
+Progress: 90%
+RR1 received
+Transfer Rate: 444.4 Kb/s
+Sent packet number: 310
+
+===============
+Progress: 90%
+RR0 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 311
+
+===============
+Progress: 91%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 312
+
+===============
+Progress: 91%
+RR0 received
+Transfer Rate: 391.3 Kb/s
+Sent packet number: 313
+
+===============
+Progress: 91%
+RR1 received
+Transfer Rate: 391.3 Kb/s
+Sent packet number: 314
+
+===============
+Progress: 91%
+RR0 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 315
+
+===============
+Progress: 92%
+RR1 received
+Transfer Rate: 307.7 Kb/s
+Sent packet number: 316
+
+===============
+Progress: 92%
+RR0 received
+Transfer Rate: 378.9 Kb/s
+Sent packet number: 317
+
+===============
+Progress: 92%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 318
+
+===============
+Progress: 93%
+RR0 received
+Transfer Rate: 342.9 Kb/s
+Sent packet number: 319
+
+===============
+Progress: 93%
+RR1 received
+Transfer Rate: 346.2 Kb/s
+Sent packet number: 320
+
+===============
+Progress: 93%
+RR0 received
+Transfer Rate: 383.0 Kb/s
+Sent packet number: 321
+
+===============
+Progress: 93%
+RR1 received
+Transfer Rate: 315.8 Kb/s
+Sent packet number: 322
+
+===============
+Progress: 94%
+RR0 received
+Transfer Rate: 367.3 Kb/s
+Sent packet number: 323
+
+===============
+Progress: 94%
+RR1 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 324
+
+===============
+Progress: 94%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 325
+
+===============
+Progress: 95%
+RR1 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 326
+
+===============
+Progress: 95%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 327
+
+===============
+Progress: 95%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 328
+
+===============
+Progress: 95%
+RR0 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 329
+
+===============
+Progress: 96%
+RR1 received
+Transfer Rate: 61.5 Kb/s
+Sent packet number: 330
+
+===============
+Progress: 96%
+RR0 received
+Transfer Rate: 208.1 Kb/s
+Sent packet number: 331
+
+===============
+Progress: 96%
+RR1 received
+Transfer Rate: 225.0 Kb/s
+Sent packet number: 332
+
+===============
+Progress: 97%
+RR0 received
+Transfer Rate: 336.4 Kb/s
+Sent packet number: 333
+
+===============
+Progress: 97%
+RR1 received
+Transfer Rate: 387.1 Kb/s
+Sent packet number: 334
+
+===============
+Progress: 97%
+RR0 received
+Transfer Rate: 400.0 Kb/s
+Sent packet number: 335
+
+===============
+Progress: 98%
+RR1 received
+Transfer Rate: 418.6 Kb/s
+Sent packet number: 336
+
+===============
+Progress: 98%
+RR0 received
+Transfer Rate: 281.2 Kb/s
+Sent packet number: 337
+
+===============
+Progress: 98%
+RR1 received
+Transfer Rate: 395.6 Kb/s
+Sent packet number: 338
+
+===============
+Progress: 98%
+RR0 received
+Transfer Rate: 413.8 Kb/s
+Sent packet number: 339
+
+===============
+Progress: 99%
+RR1 received
+Transfer Rate: 168.2 Kb/s
+Sent packet number: 340
+
+===============
+Progress: 99%
+RR0 received
+Transfer Rate: 318.6 Kb/s
+Sent packet number: 341
+
+===============
+Progress: 99%
+RR1 received
+Transfer Rate: 324.3 Kb/s
+Sent packet number: 342
+
+===============
+Progress: 100%
+RR0 received
+Transfer Rate: 314.6 Kb/s
+Sent packet number: 343
+
+===============
+RR1 received
+Transfer Rate: 260.9 Kb/s
+Control Packet END sent
+
+===

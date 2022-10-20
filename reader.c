@@ -3,8 +3,9 @@
 #include "stateMachine.h"
 #include "application_layer.h"
 
-
-unsigned char *llread(int fd, unsigned long *size)
+int fd_r;
+int expectedBCC;
+unsigned char *llread(int fd_r, unsigned long *size)
 {
 	int curr_state = 0;
 	int tramaNum = 0;
@@ -15,7 +16,7 @@ unsigned char *llread(int fd, unsigned long *size)
 	int destuffingError = 0;
 	while (curr_state < 6)
 	{
-		read(fd, &c, 1);
+		read(fd_r, &c, 1);
 		switch (curr_state){
 		case 0:
 			if (c == FLAG)
@@ -128,9 +129,9 @@ unsigned char *llread(int fd, unsigned long *size)
 		if (tramaNum == expectedBCC)
 		{
 			if (tramaNum == 0)
-				sendControlField(fd, RR1);
+				sendControlField(fd_r, RR1);
 			else
-				sendControlField(fd, RR0);
+				sendControlField(fd_r, RR0);
 			printf("Enviou RR%d\n", !tramaNum);	
 			expectedBCC = (expectedBCC+1)%2;
 		}
@@ -139,9 +140,9 @@ unsigned char *llread(int fd, unsigned long *size)
 			*size = 0;
 			
 			if (tramaNum == 0)
-				sendControlField(fd, RR1);
+				sendControlField(fd_r, RR1);
 			else
-				sendControlField(fd, RR0);
+				sendControlField(fd_r, RR0);
 				
 		}
 	}
@@ -151,9 +152,9 @@ unsigned char *llread(int fd, unsigned long *size)
 		}
 		*size = 0;
 		if (tramaNum == 0)
-			sendControlField(fd, REJ1);
+			sendControlField(fd_r, REJ1);
 		else
-			sendControlField(fd, REJ0);
+			sendControlField(fd_r, REJ0);
 	}
 	
 	return frame;
@@ -179,13 +180,13 @@ int llopenR(int porta, int status)
       Open serial port device for reading and writing and not as controlling tty
       because we don't want to get killed if linenoise sends CTRL-C.
     */
-	fd = open(link_layer.port, O_RDWR | O_NOCTTY);
-	if (fd < 0)
+	fd_r = open(link_layer.port, O_RDWR | O_NOCTTY);
+	if (fd_r < 0)
 	{
 		perror(link_layer.port);
 		exit(-1);
 	}
-	if (setTermios(fd) < 0)
+	if (setTermios(fd_r) < 0)
 	{
 		perror("Setting termios settings");
 		return -1;
@@ -195,21 +196,21 @@ int llopenR(int porta, int status)
 
 		while (curr_level < 5)
 		{  
-			res = read(fd, buf, 1);
+			res = read(fd_r, buf, 1);
 			if (res > 0)
 			{
 				curr_level = stateMachine(buf[0], curr_level, SET);
 			}
 		}
 		///SEND UA
-		res = write(fd, UA, 5);
+		res = write(fd_r, UA, 5);
 		printf("Sent UA\n");
 	}
-	return fd;
+	return fd_r;
 }
 
 
-void llcloseR(int fd){
+void llcloseR(int fd_r){
 
 	DISCr[0]=FLAG;
 	DISCr[1]=Aemiss;
@@ -223,14 +224,14 @@ void llcloseR(int fd){
 	UA[3] = UA[1] ^ UA[2];
 	UA[4] = FLAG;
 	
-	readControlMessageR(fd,DISCr);
+	readControlMessageR(fd_r,DISCr);
 	printf("Received DISC\n");
-	sendControlField(fd, DISC);
+	sendControlField(fd_r, DISC);
 	printf("Sent DISC\n");
-	readControlMessageR(fd, UA);
+	readControlMessageR(fd_r, UA);
 	printf("Received UA\n");
 
-	tcsetattr(fd, TCSANOW, &link_layer.oldPortSettings);
+	tcsetattr(fd_r, TCSANOW, &link_layer.oldPortSettings);
 }
 
 int checkBCC2(unsigned char *packet, int size)

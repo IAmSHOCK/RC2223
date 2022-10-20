@@ -10,6 +10,11 @@
 #include <string.h>
 #include "macros.h"
 
+unsigned char SET[5];
+unsigned char UA[5];
+unsigned char DISCw[5];
+unsigned char DISCr[5];
+unsigned char RRv[5];
 int stateMachine(unsigned char c, int curr_state, unsigned char arg[])
 {
   //state machine for SET/UA 

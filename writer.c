@@ -9,10 +9,13 @@ int openOrWrite = 0;
 
 //handles the alarm signal
 int flag = 0;
-
 int tramaInfo = 0;
 
-int llwriteW(int fd, unsigned char *packetsFromCtrl, int sizeOfTrama)
+int finalSize;
+unsigned char * finalMessage;
+int fd_w;
+
+int llwriteW(int fd_w, unsigned char *packetsFromCtrl, int sizeOfTrama)
 {
   startCounter(); //Counter for elapsed time
   numAttempts = 0;
@@ -86,7 +89,7 @@ int llwriteW(int fd, unsigned char *packetsFromCtrl, int sizeOfTrama)
     }
     finalMessage[j + 1] = FLAG;
     
-    write(fd, finalMessage, finalSize);    
+    write(fd_w, finalMessage, finalSize);    
     
     RRv[0]=FLAG;
     RRv[1]=Aemiss;
@@ -97,7 +100,7 @@ int llwriteW(int fd, unsigned char *packetsFromCtrl, int sizeOfTrama)
 
     alarm(3);
 
-    unsigned char C = readControlMessageW(fd,RRv);
+    unsigned char C = readControlMessageW(fd_w,RRv);
     
     if ((C == RR0 && tramaInfo == 1) || (C == RR1 && tramaInfo == 0)) //successful
     {
@@ -188,13 +191,13 @@ int llopenW(int porta, int status)
       Open serial port device for reading and writing and not as controlling tty
       because we don't want to get killed if linenoise sends CTRL-C.
     */
-  fd = open(link_layer.port, O_RDWR | O_NOCTTY);
-  if (fd < 0)
+  fd_w = open(link_layer.port, O_RDWR | O_NOCTTY);
+  if (fd_w < 0)
   {
     perror(link_layer.port);
     exit(-1);
   }
-  if (setTermios(fd) < 0)
+  if (setTermios(fd_w) < 0)
   {
     perror("Setting termios settings");
     return -1;
@@ -203,14 +206,14 @@ int llopenW(int porta, int status)
   { //Emissor
     if ((!isConnected) && (numAttempts < 4))
     {
-      res = write(fd, SET, 5);
+      res = write(fd_w, SET, 5);
       alarm(3);
     }
     printf("Sent SET,waiting for receiver\n");
     //Receive UA
     while (curr_level < 5)
     { 
-      res = read(fd, buf, 1);
+      res = read(fd_w, buf, 1);
       if (res > 0)
       {
         curr_level = stateMachine(buf[0], curr_level, UA);
@@ -221,15 +224,15 @@ int llopenW(int porta, int status)
 
   isConnected = 1;
 
-  return fd;
+  return fd_w;
 }
 
 void callAlarm()
 {
   if (!flag)
-    write(fd, SET, 5);
+    write(fd_w, SET, 5);
   else
-    write(fd, finalMessage, finalSize); // declared global variables malloc ca<refull
+    write(fd_w, finalMessage, finalSize); // declared global variables malloc ca<refull
   alarm(3);
 }
 void timeout()
@@ -248,27 +251,27 @@ void timeout()
 
 
 
-void llcloseW(int fd){
-  sendControlField(fd, DISC);
+void llcloseW(int fd_w){
+  sendControlField(fd_w, DISC);
   printf("Sent DISC\n");
   DISCw[0]=FLAG;
   DISCw[1]=Aemiss;
   DISCw[2]=DISC; //não é usado
   DISCw[3]=DISCw[1]^DISCw[2];
   DISCw[4]=FLAG;
-  unsigned char returnValue = readControlMessageW(fd,DISCw);
+  unsigned char returnValue = readControlMessageW(fd_w,DISCw);
 
   while(returnValue != DISC){
-    returnValue = readControlMessageW(fd,DISCw);
+    returnValue = readControlMessageW(fd_w,DISCw);
   }
 
   printf("Received DISC\n");
   //sleep(1);
-  sendControlField(fd, uaC);
+  sendControlField(fd_w, uaC);
   printf("Last UA sent\n");
   sleep(1);
 
-  if(tcsetattr(fd, TCSANOW, &link_layer.oldPortSettings) == -1){
+  if(tcsetattr(fd_w, TCSANOW, &link_layer.oldPortSettings) == -1){
     perror("tcsetattr");
     exit(-1);
   }

@@ -40,9 +40,9 @@ int llwrite(int fd, char * buffer, int length);
 
 
 //Global variables
-int finalSize;
-unsigned char * finalMessage;
-int fd;
+extern int finalSize;
+extern unsigned char * finalMessage;
+extern int fd_w;
 int llwriteW(int fd, unsigned char * startOfFile,int finalSize);
 
 //      Application Layer Functions
