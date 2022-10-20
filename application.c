@@ -63,3 +63,20 @@ void sendifle(char file_name[]) {
     endPackage();
 }
 
+
+
+
+
+
+
+
+/*
+in the reciever:
+-if an error in BCC1 is detected, print on the screen "error in the protocol"
+-if an error in bcc2 is detected, print on the sceen "error in the data"
+-if a duplicate frame is detected, print "duplicate frame"
+ 
+in the transmitter:
+-if a REJ frame is detected, print on the screen "REJ recieved"
+-if a time-out occurs, print on the screen "time-out"
+*/
