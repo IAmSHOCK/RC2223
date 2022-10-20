@@ -12,10 +12,10 @@
          return -1;
      }
      fseek(fp, 0L, SEEK_END);
-     long int res = ftell(fp);
+     long int fileSize = ftell(fp);
      fclose(fp);
   
-     return res;
+     return fileSize;
  }
 
 int nBytes_to_represent(int n) {
@@ -28,7 +28,7 @@ int nBytes_to_represent(int n) {
 }
 
  }
- int controlPackage(unsigned char * arr, unsigned char controlByte, int fileSize, char* fileName) {
+ int controlPackage(unsigned char* arr, unsigned char controlByte, int fileSize, char* fileName) {
      
      int size = findSize(fileName);
      
@@ -50,9 +50,34 @@ int nBytes_to_represent(int n) {
         arr[nxt + 2 + j] = fileName[j];
      }
      return 1;
+  
+   //llwrite();
  }
 
-void dataPacket() {
+void dataPacket(char* buf, int* dataLength) {
+ 
+    unsigned char *dataPacket = (unsigned char *)malloc((*sizeOfFragment) + 4);
+    char *data = (char *)malloc(dataLength);
+    memcpy(data, dataPacket, dataLength);
+ 
+    unsigned char c = 0x01;
+    int n = 0 % 255;
+    int l1 = *dataLength % 256;
+    int l2 = *dataLength / 256;
+    
+    dataPacket[0] = c;
+    dataPacket[1] = n;
+    dataPacket[2] = l1;
+    dataPacket[3] = l2;
+    
+    for (int i = 0; i < dataLength; i++) {
+       dataPacket[i+4] = data[i];
+    }
+ 
+    free(data);
+ 
+    
+ 
 }
 void sendifle(char file_name[]) {
     startPackage();
