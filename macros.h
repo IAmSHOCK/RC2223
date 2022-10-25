@@ -32,13 +32,4 @@
 
 #define ESCAPE_FLAG2 0x5D
 
-
-
-
-/*
-#define A_RECEIVER 0x01
-#define A_EMISSOR 0x03
-*/
-
-
 #endif

@@ -5,7 +5,7 @@
 LinkLayer link_layer;
 int setTermios(int fd) {
   struct termios oldtio,newtio;
-  if (tcgetattr(fd,&oldtio) == -1) { /* save current port settings */
+  if (tcgetattr(fd,&oldtio) == -1) { // save current port settings
     perror("tcgetattr");
     exit(-1);
   }
@@ -18,12 +18,9 @@ int setTermios(int fd) {
   /* set input mode (non-canonical, no echo,...) */
   newtio.c_lflag = 0;
 
-  newtio.c_cc[VTIME]    = 0;   /* inter-character timer unused */
-  newtio.c_cc[VMIN]     = 1;   /* blocking read until 1 char received */
-  /*
-    VTIME e VMIN devem ser alterados de forma a proteger com um temporizador a
-    leitura do(s) pr�ximo(s) caracter(es)
-  */
+  newtio.c_cc[VTIME]    = 0;   // inter-character timer unused
+  newtio.c_cc[VMIN]     = 1;   //blocking read until 1 char received
+
   tcflush(fd, TCIOFLUSH);
 
   if (tcsetattr(fd,TCSANOW,&newtio) == -1) {

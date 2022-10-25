@@ -13,8 +13,7 @@
 #include <signal.h>
 
 
-
-//       Data Link Layer Functions
+// Data Link Layer Functions
 
 int llopenR(int porta, int status);
 
