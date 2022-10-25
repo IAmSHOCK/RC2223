@@ -17,7 +17,7 @@ unsigned char DISCr[5];
 unsigned char RRv[5];
 int stateMachine(unsigned char c, int curr_state, unsigned char arg[])
 {
-  //state machine for SET/UA 
+  // state machine for SET/UA
   switch (curr_state)
   {
   case 0:
@@ -82,16 +82,14 @@ int stateMachine(unsigned char c, int curr_state, unsigned char arg[])
   return curr_state;
 }
 
-
-
-unsigned char readControlMessageW(int fd,unsigned char * ctrl)
+unsigned char readControlMessageW(int fd, unsigned char *ctrl)
 {
   int curr_state = 0;
   unsigned char c, returnValue;
   while (curr_state != 5)
   {
     read(fd, &c, 1);
-    
+
     switch (curr_state)
     {
     case 0:
@@ -144,10 +142,10 @@ unsigned char readControlMessageW(int fd,unsigned char * ctrl)
       }
       break;
     case 4:
-    
+
       if (c == ctrl[0])
       {
-        
+
         curr_state = 5;
         return returnValue;
       }
@@ -163,16 +161,16 @@ unsigned char readControlMessageW(int fd,unsigned char * ctrl)
   return returnValue;
 }
 
-unsigned char readControlMessageR(int fd,unsigned char * ctrl)
+unsigned char readControlMessageR(int fd, unsigned char *ctrl)
 {
-  //reads DISC/UA in reader
+  // reads DISC/UA in reader
   int curr_state = 0;
   unsigned char c;
   while (curr_state != 5)
   {
-    
+
     read(fd, &c, 1);
-    
+
     switch (curr_state)
     {
     case 0:
@@ -240,4 +238,3 @@ unsigned char readControlMessageR(int fd,unsigned char * ctrl)
   }
   return 0;
 }
-

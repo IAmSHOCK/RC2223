@@ -69,7 +69,7 @@ int main(int argc, char **argv)
   }
 
   unsigned int ps_array[] = {32, 64, 128, 256, 512, 1024};
-  app_layer.size = ps_array[ps_input - 1];
+  app_layer.packet_size = ps_array[ps_input - 1];
 
   (void)signal(SIGALRM, timeout);
   if (!strcmp(argv[2], "S"))
@@ -112,12 +112,12 @@ void data_writer(int argc, char *argv[])
 
   initCounter();
   llwriteW(fd, pointerToCtrlPacket, controlPacketSize);
-  int packetSize = app_layer.size;
+  int packetSize = app_layer.packet_size;
   long int curr_index = 0;
   unsigned long progress = 0;
   set_n_wrong_packets(fileSize / packetSize);
 
-  while (curr_index < fileSize && packetSize == app_layer.size)
+  while (curr_index < fileSize && packetSize == app_layer.packet_size)
   {
 
     // get a piece of the file, then add the header, then send
@@ -127,7 +127,7 @@ void data_writer(int argc, char *argv[])
     unsigned char *packet_and_header = makePacketHeader(packet, fileSize, &packetHeaderSize);
 
     progress = (unsigned long)(((double)curr_index / (double)fileSize) * 100);
-    printf("\n===============\n");
+    printf("\n----------------\n");
     printf("Progress: %lu%%\n", progress);
 
     llwriteW(fd, packet_and_header, packetHeaderSize);
@@ -138,10 +138,10 @@ void data_writer(int argc, char *argv[])
 
   unsigned char *pointerToCtrlPacketEnd = makeControlPackage_I(fileSize, file_name, file_name_size, &controlPacketSize, CTRL_C_END);
 
-  printf("\n===============\n");
+  printf("\n----------------\n");
   llwriteW(fd, pointerToCtrlPacketEnd, controlPacketSize);
   printf("Control Packet END sent\n");
-  printf("\n===============\n");
+  printf("\n----------------\n");
   printf("Transfer time: %.2f seconds\n", getDeltaTime());
 
   free(pointerToCtrlPacket);
@@ -178,13 +178,9 @@ void data_reader(int argc, char *argv[])
   while (reading)
   {
     size = 0;
-    printf("\n================\n");
+    printf("\n----------------\n");
     dataPacket = llread(fd, &size);
     fileSize += size;
-    if (size == 0)
-    {
-      continue;
-    }
     if (dataPacket[0] == CTRL_C_END)
     {
       printf("Control Packet END received\n");
@@ -206,16 +202,14 @@ void data_reader(int argc, char *argv[])
     free(dataPacket);
   }
 
-  if (!receivedEND(startPacket, start_size, dataPacket, size))
+  if (!checkFinalPacket(startPacket, start_size, dataPacket, size))
   {
     printf("Start and End packets do not match\n");
     exit(-1);
   }
 
-  printf("\n===============\n");
+  printf("\n----------------\n");
   printf("Size of received file:  %lu\n", index);
-
-  // fileName[0] = 'c'; //to have diferent names
 
   createFile(finalFile, &index, fileName);
   free(finalFile);
@@ -234,8 +228,9 @@ void createFile(unsigned char *mensagem, off_t *sizeFile, char *filename)
   fclose(file);
 }
 
-int receivedEND(unsigned char *start, int sizeStart, unsigned char *end, int sizeEnd)
+int checkFinalPacket(unsigned char *start, int sizeStart, unsigned char *end, int sizeEnd)
 {
+  // check if the start and end packets match
   int s = 1;
   int e = 1;
   if (sizeStart != sizeEnd)
@@ -260,14 +255,12 @@ int receivedEND(unsigned char *start, int sizeStart, unsigned char *end, int siz
 
 unsigned char *makeControlPackage_I(off_t fileSize, char *fileName, long int fileName_size, long int *finalSize, unsigned char start_or_end)
 {
-  /*
+  // TLV (Type, Length, Value)
+  // - T (um octeto) - indica qual o parâmetro (0 - tamanho do ficheiro, 1 - nome do
+  // ficheiro)
+  // - L (um octeto) - indica o tamanho em octetos do campo V (valor do parâmetro)
+  // - V (número de octetos indicado em L) - valor do parâmetro
 
-TLV (Type, Length, Value)
-– T (um octeto) – indica qual o parâmetro (0 – tamanho do ficheiro, 1 – nome do
-ficheiro, outros valores – a definir, se necessário)
-– L (um octeto) – indica o tamanho em octetos do campo V (valor do parâmetro)
-– V (número de octetos indicado em L) – valor do parâmetro
-  */
 
   *finalSize = 5 + sizeof(fileSize) + fileName_size;
   unsigned char *finalPackage = (unsigned char *)malloc(sizeof(unsigned char) * (*finalSize));
@@ -285,14 +278,14 @@ ficheiro, outros valores – a definir, se necessário)
     printf("Invalid value in control packet!\n");
     return NULL;
   }
-  finalPackage[1] = T1;               // Tamanho do ficheiro
+  finalPackage[1] = T0;               // Tamanho do ficheiro
   finalPackage[2] = sizeof(fileSize); // 8
   int i;
   for (i = 0; i < finalPackage[2]; i++)
   {
     finalPackage[3 + i] = (fileSize >> (i * 8)) & 0xFF;
   }
-  finalPackage[3 + finalPackage[2]] = T2;
+  finalPackage[3 + finalPackage[2]] = T1;
   finalPackage[4 + finalPackage[2]] = fileName_size;
 
   for (i = 0; i < fileName_size; i++)
@@ -323,7 +316,7 @@ unsigned char *readFile(char *fileName, off_t *fileSize)
   fread(fileData, sizeof(unsigned char), *fileSize, fd);
   if (ferror(fd))
   {
-    perror("error writting to file\n");
+    perror("error reading from file\n");
   }
   fclose(fd);
   return fileData;
@@ -383,7 +376,7 @@ unsigned char *removeHeaders(unsigned char *packetWithHeader, unsigned long *siz
 void getStartPacketData(unsigned char *packet, unsigned long *fileSize, int *fileSizeBytes, int *fileNameSize, char *fileName)
 {
   int i;
-  if (!(packet[0] == CTRL_C_START && packet[1] == T1))
+  if (!(packet[0] == CTRL_C_START && packet[1] == T0))
   {
     printf("Invalid Packet: Not start packet\n");
   }
@@ -392,7 +385,7 @@ void getStartPacketData(unsigned char *packet, unsigned long *fileSize, int *fil
   {
     *fileSize = (*fileSize) | (packet[3 + i] << (i * 8));
   }
-  if (packet[3 + *fileSizeBytes] != T2)
+  if (packet[3 + *fileSizeBytes] != T1)
   {
     printf("Invalid Packet: File without name\n");
   }

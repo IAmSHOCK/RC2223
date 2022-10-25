@@ -29,10 +29,4 @@ int checkBCC2(unsigned char *packet, int size);
 extern int fd_r;
 extern int expectedBCC;
 
-
-
-
-
-
-
 #endif

@@ -23,8 +23,8 @@
 #define ESCAPE_FLAG1 0x5E
 #define DISC 0x0B
 
-#define T1           0x00   //Tamanho do ficheiro
-#define T2           0x01   //Nome do ficheiro
+#define T0           0x00   //Tamanho do ficheiro
+#define T1           0x01   //Nome do ficheiro
 #define L1           0x08   //4 - Tamanho de um long int
 
 #define WMODE 1
