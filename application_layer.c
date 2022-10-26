@@ -255,12 +255,6 @@ int checkFinalPacket(unsigned char *start, int sizeStart, unsigned char *end, in
 
 unsigned char *makeControlPackage_I(off_t fileSize, char *fileName, long int fileName_size, long int *finalSize, unsigned char start_or_end)
 {
-  // TLV (Type, Length, Value)
-  // - T (um octeto) - indica qual o parâmetro (0 - tamanho do ficheiro, 1 - nome do
-  // ficheiro)
-  // - L (um octeto) - indica o tamanho em octetos do campo V (valor do parâmetro)
-  // - V (número de octetos indicado em L) - valor do parâmetro
-
 
   *finalSize = 5 + sizeof(fileSize) + fileName_size;
   unsigned char *finalPackage = (unsigned char *)malloc(sizeof(unsigned char) * (*finalSize));

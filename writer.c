@@ -8,7 +8,7 @@ int isConnected = 0;
 int openOrWrite = 0;
 
 // handles the alarm signal
-int flag = 0;
+int alarm_flag = 0;
 int currSendingTrama = 0;
 
 int finalSize;
@@ -20,7 +20,7 @@ int llwriteW(int fd_w, unsigned char *packetsFromCtrl, int sizeOfTrama)
   startCounter(); // Counter for elapsed time
   numAttempts = 0;
   isConnected = 0;
-  flag = 1;
+  alarm_flag = 1;
   finalMessage = (unsigned char *)malloc((sizeOfTrama + 6) * sizeof(unsigned char));
   finalSize = sizeOfTrama + 6;
   finalMessage[0] = FLAG;
@@ -232,7 +232,7 @@ int llopenW(int porta, int status)
 
 void callAlarm()
 {
-  if (!flag)
+  if (!alarm_flag)
     write(fd_w, SET, 5);
   else
     write(fd_w, finalMessage, finalSize); // declared global variables malloc carefull
