@@ -190,10 +190,9 @@ int llopenW(int porta, int status)
   char buf[255];
   int curr_level = 0;
 
-  /*
-      Open serial port device for reading and writing and not as controlling tty
-      because we don't want to get killed if linenoise sends CTRL-C.
-    */
+  // Open serial port device for reading and writing and not as controlling tty
+  // because we don't want to get killed if linenoise sends CTRL-C.
+
   fd_w = open(link_layer.port, O_RDWR | O_NOCTTY);
   if (fd_w < 0)
   {
