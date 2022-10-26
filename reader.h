@@ -13,7 +13,8 @@
 #include <signal.h>
 
 
-// Data Link Layer Functions
+
+//       Data Link Layer Functions
 
 int llopenR(int porta, int status);
 
@@ -27,5 +28,11 @@ int checkBCC2(unsigned char *packet, int size);
 
 extern int fd_r;
 extern int expectedBCC;
+
+
+
+
+
+
 
 #endif

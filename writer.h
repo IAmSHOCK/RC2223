@@ -13,27 +13,27 @@
 #include <signal.h>
 
 #define CTRL_C_START 0x02
-#define CTRL_C_END 0x03
+#define CTRL_C_END   0x03
+
 
 void callAlarm();
 void timeout();
-
 // Data Link Layer Functions
 
-int llopenW(int porta, int status);
+int llopenW(int porta, int status); //TODO Tirar argumentos
 
-int llwrite(int fd, char *buffer, int length);
+int llwrite(int fd, char * buffer, int length);
 
-// Global variables
+//Global variables
 extern int finalSize;
-extern unsigned char *finalMessage;
+extern unsigned char * finalMessage;
 extern int fd_w;
-int llwriteW(int fd, unsigned char *startOfFile, int finalSize);
+int llwriteW(int fd, unsigned char * startOfFile,int finalSize);
 
 // Application Layer Functions
 
 unsigned char getBCC2(unsigned char *mensagem, int size);
-unsigned char *stuffBCC2(unsigned char BCC2, int *sizeOfBCC2);
+unsigned char *stuffing(unsigned char BCC2, int *sizeOfBCC2);
 
 void llcloseW(int fd);
 

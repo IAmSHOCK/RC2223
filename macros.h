@@ -12,10 +12,8 @@
 #define uaC 0x07
 #define setC 0x03
 #define ESCAPEBYTE 0x7D
-#define PINGUIM_SIZE 10968
 #define C0 0x00
 #define C1 0x40
-#define pinguim "pinguim.gif"
 #define RR0 0x05
 #define RR1 0x85
 #define REJ0 0x01
@@ -23,12 +21,9 @@
 #define ESCAPE_FLAG1 0x5E
 #define DISC 0x0B
 
-#define T0 0x00   //Tamanho do ficheiro
-#define T1 0x01   //Nome do ficheiro
-#define L1 0x08   //4 - Tamanho de um long int
-
-#define WMODE 1
-#define RMODE 0
+#define T1  0x00   //Tamanho do ficheiro
+#define T2  0x01   //Nome do ficheiro
+#define L1  0x08   //4 - Tamanho de um long int
 
 #define ESCAPE_FLAG2 0x5D
 

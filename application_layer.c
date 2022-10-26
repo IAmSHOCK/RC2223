@@ -11,39 +11,29 @@
 
 unsigned int msg_count = 0;
 applicationLayer app_layer;
-
 int main(int argc, char **argv)
 {
 
   if (argc < 3)
   {
-    printf("Usage:\tserial SerialPort ComunicationMode\n\tex: serial [/dev/ttyS0|/dev/ttyS1] [S|R] [fileName]\n");
+    printf("Usage:\trun serialPort S|R filename");
     exit(1);
   }
 
-  if (strstr(argv[1], "/dev/ttyS") != NULL)
-  {
-    link_layer.port = argv[1];
-  }
-  else
-  {
-    perror("port should be /dev/ttySx where x is the a number \n");
-    return -1;
-  }
+  link_layer.port = argv[1];
 
   int bd_input;
   printf("Choose a Baudrate: \n"
-         "1 - B1200\n"
-         "2 - B2400\n"
-         "3 - B4800\n"
-         "4 - B19200\n"
-         "5 - B38400\n"
-         "6 - B115200\n"
-         "Value: ");
+          "1 - B1200\n"
+          "2 - B2400\n"
+          "3 - B4800\n"
+          "4 - B19200\n"
+          "5 - B38400\n"
+          "6 - B115200\n"
+          "Value: ");
   scanf("%d", &bd_input);
 
-  if (bd_input > 6 || bd_input < 1)
-  {
+  if(bd_input > 6 || bd_input < 1){
     perror("Valor invalido! ");
     return -1;
   }
@@ -51,25 +41,27 @@ int main(int argc, char **argv)
   unsigned long bd_array[] = {B1200, B2400, B4800, B19200, B38400, B115200};
   link_layer.baudRate = bd_array[bd_input - 1];
 
+
   int ps_input;
   printf("Choose a Packet Size: \n"
-         "1 - 32\n"
-         "2 - 64\n"
-         "3 - 128\n"
-         "4 - 256\n"
-         "5 - 512\n"
-         "6 - 1024\n"
-         "Value: ");
+          "1 - 32\n"
+          "2 - 64\n"
+          "3 - 128\n"
+          "4 - 256\n"
+          "5 - 512\n"
+          "6 - 1024\n"
+          "Value: ");
   scanf("%d", &ps_input);
 
-  if (ps_input > 6 || ps_input < 1)
-  {
+  if(ps_input > 6 || ps_input < 1){
     perror("Valor invalido! ");
     return -1;
   }
 
   unsigned int ps_array[] = {32, 64, 128, 256, 512, 1024};
-  app_layer.packet_size = ps_array[ps_input - 1];
+  app_layer.size = ps_array[ps_input - 1];
+
+
 
   (void)signal(SIGALRM, timeout);
   if (!strcmp(argv[2], "S"))
@@ -93,7 +85,8 @@ int main(int argc, char **argv)
   return 0;
 }
 
-// main function called after choosing sender
+
+//main function called after choosing sender
 void data_writer(int argc, char *argv[])
 {
 
@@ -110,24 +103,25 @@ void data_writer(int argc, char *argv[])
   printf("fileSize: %ld\n", fileSize);
   unsigned char *pointerToCtrlPacket = makeControlPackage_I(fileSize, file_name, file_name_size, &controlPacketSize, CTRL_C_START);
 
+
   initCounter();
   llwriteW(fd, pointerToCtrlPacket, controlPacketSize);
-  int packetSize = app_layer.packet_size;
+  int packetSize = app_layer.size;
   long int curr_index = 0;
   unsigned long progress = 0;
-  set_n_wrong_packets(fileSize / packetSize);
+  set_n_wrong_packets(fileSize/packetSize);
 
-  while (curr_index < fileSize && packetSize == app_layer.packet_size)
+  while (curr_index < fileSize && packetSize == app_layer.size)
   {
 
-    // get a piece of the file, then add the header, then send
+    //get a piece of the file, then add the header, then send
     unsigned char *packet = splitFile(file, &curr_index, &packetSize, fileSize);
 
     int packetHeaderSize = packetSize;
     unsigned char *packet_and_header = makePacketHeader(packet, fileSize, &packetHeaderSize);
 
-    progress = (unsigned long)(((double)curr_index / (double)fileSize) * 100);
-    printf("\n----------------\n");
+    progress = (unsigned long)(((double)curr_index/(double)fileSize)*100);
+    printf("\n===============\n");
     printf("Progress: %lu%%\n", progress);
 
     llwriteW(fd, packet_and_header, packetHeaderSize);
@@ -138,11 +132,11 @@ void data_writer(int argc, char *argv[])
 
   unsigned char *pointerToCtrlPacketEnd = makeControlPackage_I(fileSize, file_name, file_name_size, &controlPacketSize, CTRL_C_END);
 
-  printf("\n----------------\n");
+  printf("\n===============\n");
   llwriteW(fd, pointerToCtrlPacketEnd, controlPacketSize);
   printf("Control Packet END sent\n");
-  printf("\n----------------\n");
-  printf("Transfer time: %.2f seconds\n", getDeltaTime());
+  printf("\n===============\n");
+  printf("Transfer time: %.2f seconds\n",getDeltaTime());
 
   free(pointerToCtrlPacket);
   free(pointerToCtrlPacketEnd);
@@ -150,7 +144,8 @@ void data_writer(int argc, char *argv[])
   llcloseW(fd);
 }
 
-// main function called after choosing receiver
+
+//main function called after choosing receiver
 void data_reader(int argc, char *argv[])
 {
   int reading = 1;
@@ -159,13 +154,13 @@ void data_reader(int argc, char *argv[])
   expectedBCC = 0;
   int start_size;
 
-  char *fileName = (char *)malloc(0);
+  char * fileName = (char*)malloc(0);
   int fileSizeBytes = 0;
   int fileNameSize = 0;
   unsigned long totalSize = 0;
 
   unsigned char *startPacket = llread(fd, &size);
-  getStartPacketData(startPacket, &totalSize, &fileSizeBytes, &fileNameSize, fileName);
+  getStartPacketData(startPacket,&totalSize,&fileSizeBytes,&fileNameSize,fileName);
   start_size = size;
 
   unsigned char *dataPacket;
@@ -178,9 +173,13 @@ void data_reader(int argc, char *argv[])
   while (reading)
   {
     size = 0;
-    printf("\n----------------\n");
+    printf("\n================\n");
     dataPacket = llread(fd, &size);
     fileSize += size;
+    if (size == 0)
+    {
+      continue;
+    }
     if (dataPacket[0] == CTRL_C_END)
     {
       printf("Control Packet END received\n");
@@ -190,26 +189,26 @@ void data_reader(int argc, char *argv[])
     msg_count++;
     printf("Received packet number: %d\n", msg_count);
 
-    // remove headers
+    //remove headers
     dataPacket = removeHeaders(dataPacket, &size);
 
-    finalFile = (unsigned char *)realloc(finalFile, fileSize);
+    finalFile = (unsigned char *)realloc(finalFile,fileSize);
     memcpy(finalFile + index, dataPacket, size);
     index += size;
 
-    progress = 100 * (((double)index) / ((double)totalSize));
-    printf("Progress: %d%%\n", progress);
+    progress = 100*(((double)index) / ((double) totalSize));
+    printf("Progress: %d%%\n",progress);
     free(dataPacket);
   }
 
-  if (!checkFinalPacket(startPacket, start_size, dataPacket, size))
-  {
+  if(!receivedEND(startPacket, start_size, dataPacket, size)){
     printf("Start and End packets do not match\n");
     exit(-1);
   }
 
-  printf("\n----------------\n");
+  printf("\n===============\n");
   printf("Size of received file:  %lu\n", index);
+
 
   createFile(finalFile, &index, fileName);
   free(finalFile);
@@ -224,13 +223,12 @@ void createFile(unsigned char *mensagem, off_t *sizeFile, char *filename)
 {
   FILE *file = fopen(filename, "wb+");
   fwrite((void *)mensagem, 1, *sizeFile, file);
-  printf("New file %s created\n", filename);
+  printf("New file %s created\n",filename);
   fclose(file);
 }
 
-int checkFinalPacket(unsigned char *start, int sizeStart, unsigned char *end, int sizeEnd)
+int receivedEND(unsigned char *start, int sizeStart, unsigned char *end, int sizeEnd)
 {
-  // check if the start and end packets match
   int s = 1;
   int e = 1;
   if (sizeStart != sizeEnd)
@@ -272,19 +270,18 @@ unsigned char *makeControlPackage_I(off_t fileSize, char *fileName, long int fil
     printf("Invalid value in control packet!\n");
     return NULL;
   }
-  finalPackage[1] = T0;               // Tamanho do ficheiro
-  finalPackage[2] = sizeof(fileSize); // 8
+  finalPackage[1] = T1;               //Tamanho do ficheiro
+  finalPackage[2] = sizeof(fileSize); //8
   int i;
-  for (i = 0; i < finalPackage[2]; i++)
-  {
-    finalPackage[3 + i] = (fileSize >> (i * 8)) & 0xFF;
+  for(i = 0; i < finalPackage[2];i++){
+    finalPackage[3+i] = (fileSize >> (i*8)) & 0xFF;
   }
-  finalPackage[3 + finalPackage[2]] = T1;
-  finalPackage[4 + finalPackage[2]] = fileName_size;
+  finalPackage[3+finalPackage[2]] = T2;
+  finalPackage[4+finalPackage[2]] = fileName_size;
 
   for (i = 0; i < fileName_size; i++)
   {
-    finalPackage[5 + finalPackage[2] + i] = fileName[i];
+    finalPackage[5+finalPackage[2]+i] = fileName[i];
   }
 
   return finalPackage;
@@ -301,16 +298,16 @@ unsigned char *readFile(char *fileName, off_t *fileSize)
     perror("Error while opening the file");
     exit(0);
   }
-  stat(fileName, &data); // get the file metadata
+  stat(fileName, &data); //get the file metadata
 
-  *fileSize = data.st_size; // gets file size in bytes
+  *fileSize = data.st_size; //gets file size in bytes
 
   unsigned char *fileData = (unsigned char *)malloc(*fileSize);
 
   fread(fileData, sizeof(unsigned char), *fileSize, fd);
   if (ferror(fd))
   {
-    perror("error reading from file\n");
+    perror("error writting to file\n");
   }
   fclose(fd);
   return fileData;
@@ -337,7 +334,7 @@ unsigned char *splitFile(unsigned char *file, long int *curr_index, int *packetS
 
   if (*curr_index + *packetSize > fileSize)
   {
-    *packetSize = fileSize - *curr_index; // Returns the number of bytes not sent yet
+    *packetSize = fileSize - *curr_index; //Returns the number of bytes not sent yet
   }
   packet = (unsigned char *)malloc(*packetSize);
 
@@ -353,7 +350,7 @@ unsigned char *splitFile(unsigned char *file, long int *curr_index, int *packetS
   return packet;
 }
 
-unsigned char *removeHeaders(unsigned char *packetWithHeader, unsigned long *sizeWithHeaders)
+unsigned char * removeHeaders(unsigned char *packetWithHeader, unsigned long *sizeWithHeaders)
 {
   unsigned int i;
   *sizeWithHeaders -= 4;
@@ -367,26 +364,23 @@ unsigned char *removeHeaders(unsigned char *packetWithHeader, unsigned long *siz
   return newPacket;
 }
 
-void getStartPacketData(unsigned char *packet, unsigned long *fileSize, int *fileSizeBytes, int *fileNameSize, char *fileName)
-{
+
+void getStartPacketData(unsigned char * packet,unsigned long * fileSize,int * fileSizeBytes,int * fileNameSize, char * fileName){
   int i;
-  if (!(packet[0] == CTRL_C_START && packet[1] == T0))
-  {
+  if(!(packet[0] == CTRL_C_START && packet[1] == T1)){
     printf("Invalid Packet: Not start packet\n");
   }
   *fileSizeBytes = (int)packet[2];
-  for (i = 0; i < *fileSizeBytes; i++)
-  {
-    *fileSize = (*fileSize) | (packet[3 + i] << (i * 8));
+  for(i = 0; i < *fileSizeBytes;i++){
+    *fileSize = (*fileSize) | (packet[3+i]<<(i*8));
   }
-  if (packet[3 + *fileSizeBytes] != T1)
-  {
+  if(packet[3+*fileSizeBytes] != T2){
     printf("Invalid Packet: File without name\n");
   }
-  *fileNameSize = (int)packet[4 + *fileSizeBytes];
-  fileName = (char *)realloc(fileName, *fileNameSize);
-  for (i = 0; i < *fileNameSize; i++)
-  {
-    fileName[i] = packet[5 + (*fileSizeBytes) + i];
+  *fileNameSize = (int)packet[4+*fileSizeBytes];
+  fileName = (char *)realloc(fileName,*fileNameSize);
+  for(i = 0; i < *fileNameSize;i++){
+    fileName[i] = packet[5+(*fileSizeBytes)+i];
   }
+
 }

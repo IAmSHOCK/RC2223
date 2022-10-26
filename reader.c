@@ -17,8 +17,7 @@ unsigned char *llread(int fd_r, unsigned long *size)
 	while (curr_state < 6)
 	{
 		read(fd_r, &c, 1);
-		switch (curr_state)
-		{
+		switch (curr_state){
 		case 0:
 			if (c == FLAG)
 			{
@@ -40,7 +39,6 @@ unsigned char *llread(int fd_r, unsigned long *size)
 			}
 			break;
 		case 2:
-
 			if (c == C0)
 			{
 				controlField = c;
@@ -74,27 +72,27 @@ unsigned char *llread(int fd_r, unsigned long *size)
 				{
 					curr_state = 6;
 					bccCheckedData = 1;
-					// valid bcc2
+					//valid bcc2
 				}
 				else
 				{
 					curr_state = 6;
 					bccCheckedData = 0;
-					// invalid bcc2
+					//invalid bcc2
 				}
 			}
 			else if (c == ESCAPEBYTE)
-			{ // goes to state 5 for byte de-stuffing
+			{ //goes to state 5 for byte de-stuffing
 				curr_state = 5;
 			}
 			else
-			{ // reads data
+			{ //reads data
 				frame = (unsigned char *)realloc(frame, ++(*size));
 				frame[*size - 1] = c;
 			}
 			break;
 		case 5:
-			// Byte de-stuffing
+			//Byte de-stuffing
 			if (c == ESCAPE_FLAG1)
 			{
 				frame = (unsigned char *)realloc(frame, ++(*size));
@@ -111,20 +109,20 @@ unsigned char *llread(int fd_r, unsigned long *size)
 				{
 					printf("Non valid character after escape character\n");
 					destuffingError = 1;
-					// Invalid value after destuffing (caused by physical interference)
+					//Invalid value after destuffing (caused by physical interference)
 				}
 			}
 			curr_state = 4;
 			break;
 		}
 	}
-	frame = (unsigned char *)realloc(frame, *size - 1);
+	frame = (unsigned char *)realloc(frame, *size-1);
 	*size = *size - 1;
 
 	printf("Trama num: %d\n", tramaNum);
 	printf("Esperado: %d\n", expectedBCC);
 
-	// Enviar a resposta apropriada
+	//Enviar a resposta apropriada
 	if (bccCheckedData && !destuffingError)
 	{
 		if (tramaNum == expectedBCC)
@@ -134,10 +132,9 @@ unsigned char *llread(int fd_r, unsigned long *size)
 			else
 				sendControlField(fd_r, RR0);
 			printf("Enviou RR%d\n", !tramaNum);
-			expectedBCC = (expectedBCC + 1) % 2;
+			expectedBCC = (expectedBCC+1)%2;
 		}
-		else
-		{
+		else{
 			printf("ERROR: Expected %x, but trama was %x\n", expectedBCC, tramaNum);
 			*size = 0;
 
@@ -145,12 +142,11 @@ unsigned char *llread(int fd_r, unsigned long *size)
 				sendControlField(fd_r, RR1);
 			else
 				sendControlField(fd_r, RR0);
+
 		}
 	}
-	else
-	{
-		if (!bccCheckedData)
-		{
+	else{
+		if(!bccCheckedData){
 			printf("ERROR: Message rejected, invalid BCC\n");
 		}
 		*size = 0;
@@ -179,10 +175,10 @@ int llopenR(int porta, int status)
 	UA[4] = FLAG;
 	char buf[255];
 	int curr_level = 0;
-	/*
-	  Open serial port device for reading and writing and not as controlling tty
-	  because we don't want to get killed if linenoise sends CTRL-C.
-	*/
+
+    // Open serial port device for reading and writing and not as controlling tty
+    // because we don't want to get killed if linenoise sends CTRL-C.
+
 	fd_r = open(link_layer.port, O_RDWR | O_NOCTTY);
 	if (fd_r < 0)
 	{
@@ -195,7 +191,7 @@ int llopenR(int porta, int status)
 		return -1;
 	}
 	if (link_layer.status)
-	{ // RECETOR
+	{ //RECETOR
 
 		while (curr_level < 5)
 		{
@@ -205,21 +201,21 @@ int llopenR(int porta, int status)
 				curr_level = stateMachine(buf[0], curr_level, SET);
 			}
 		}
-		/// SEND UA
+		///SEND UA
 		res = write(fd_r, UA, 5);
 		printf("Sent UA\n");
 	}
 	return fd_r;
 }
 
-void llcloseR(int fd_r)
-{
 
-	DISCr[0] = FLAG;
-	DISCr[1] = Aemiss;
-	DISCr[2] = DISC;
-	DISCr[3] = DISCr[1] ^ DISCr[2];
-	DISCr[4] = FLAG;
+void llcloseR(int fd_r){
+
+	DISCr[0]=FLAG;
+	DISCr[1]=Aemiss;
+	DISCr[2]=DISC;
+	DISCr[3]=DISCr[1]^DISCr[2];
+	DISCr[4]=FLAG;
 
 	UA[0] = FLAG;
 	UA[1] = Aemiss;
@@ -227,7 +223,7 @@ void llcloseR(int fd_r)
 	UA[3] = UA[1] ^ UA[2];
 	UA[4] = FLAG;
 
-	readControlMessageR(fd_r, DISCr);
+	readControlMessageR(fd_r,DISCr);
 	printf("Received DISC\n");
 	sendControlField(fd_r, DISC);
 	printf("Sent DISC\n");
@@ -253,3 +249,4 @@ int checkBCC2(unsigned char *packet, int size)
 	else
 		return 0;
 }
+
