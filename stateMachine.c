@@ -17,7 +17,7 @@ unsigned char DISCr[5];
 unsigned char RRv[5];
 int stateMachine(unsigned char c, int curr_state, unsigned char arg[])
 {
-  //state machine for SET/UA 
+  //state machine for SET/UA
   switch (curr_state)
   {
   case 0:
@@ -91,7 +91,7 @@ unsigned char readControlMessageW(int fd,unsigned char * ctrl)
   while (curr_state != 5)
   {
     read(fd, &c, 1);
-    
+
     switch (curr_state)
     {
     case 0:
@@ -144,10 +144,10 @@ unsigned char readControlMessageW(int fd,unsigned char * ctrl)
       }
       break;
     case 4:
-    
+
       if (c == ctrl[0])
       {
-        
+
         curr_state = 5;
         return returnValue;
       }
@@ -170,9 +170,9 @@ unsigned char readControlMessageR(int fd,unsigned char * ctrl)
   unsigned char c;
   while (curr_state != 5)
   {
-    
+
     read(fd, &c, 1);
-    
+
     switch (curr_state)
     {
     case 0:
