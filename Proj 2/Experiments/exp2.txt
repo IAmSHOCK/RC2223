@@ -1,0 +1,1 @@
+Na experiencia 2 nao conseguimos dar ping do tux63 ao tux62 pq nao estao na mesma bridge

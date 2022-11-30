@@ -1,0 +1,764 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 1: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 1.333032016    fe80::221:5aff:fec5:61bb ff02::fb              MDNS     180    Standard query 0x0000 PTR _nfs._tcp.local, "QM" question PTR _ftp._tcp.local, "QM" question PTR _webdav._tcp.local, "QM" question PTR _webdavs._tcp.local, "QM" question PTR _sftp-ssh._tcp.local, "QM" question PTR _smb._tcp.local, "QM" question PTR _afpovertcp._tcp.local, "QM" question
+
+Frame 2: 180 bytes on wire (1440 bits), 180 bytes captured (1440 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: IPv6mcast_fb (33:33:00:00:00:fb)
+Internet Protocol Version 6, Src: fe80::221:5aff:fec5:61bb, Dst: ff02::fb
+User Datagram Protocol, Src Port: 5353, Dst Port: 5353
+Multicast Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 2.002117412    Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 3: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 4.004343634    Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 4: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 6.006588155    Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 5: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 6.260788077    fe80::221:5aff:fec5:61bb ff02::2               ICMPv6   70     Router Solicitation from 00:21:5a:c5:61:bb
+
+Frame 6: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: IPv6mcast_02 (33:33:00:00:00:02)
+Internet Protocol Version 6, Src: fe80::221:5aff:fec5:61bb, Dst: ff02::2
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 8.008813050    Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 7: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 10.010982702   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 12.013219471   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 9: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 14.015451071   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 10: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 16.017634202   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 11: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 18.019855606   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 12: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 20.021963938   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 13: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 22.024191348   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 14: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 22.467609643   HewlettP_61:2f:4e     Broadcast             ARP      42     Who has 172.16.60.254? Tell 172.16.60.1
+
+Frame 15: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 22.467708886   HewlettP_c5:61:bb     HewlettP_61:2f:4e     ARP      60     172.16.60.254 is at 00:21:5a:c5:61:bb
+
+Frame 16: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Address Resolution Protocol (reply)
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 22.467716359   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=1/256, ttl=64 (reply in 18)
+
+Frame 17: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 22.467804777   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=1/256, ttl=64 (request in 17)
+
+Frame 18: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 23.485497513   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=2/512, ttl=64 (reply in 20)
+
+Frame 19: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 23.485600039   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=2/512, ttl=64 (request in 19)
+
+Frame 20: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 24.026424903   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 21: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 24.509504369   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=3/768, ttl=64 (reply in 23)
+
+Frame 22: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 24.509607593   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=3/768, ttl=64 (request in 22)
+
+Frame 23: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 25.533499002   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=4/1024, ttl=64 (reply in 25)
+
+Frame 24: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 25.533603134   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=4/1024, ttl=64 (request in 24)
+
+Frame 25: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 26.028642536   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 26: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     27 26.557491191   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=5/1280, ttl=64 (reply in 28)
+
+Frame 27: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     28 26.557585825   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=5/1280, ttl=64 (request in 27)
+
+Frame 28: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     29 27.508998961   HewlettP_c5:61:bb     HewlettP_61:2f:4e     ARP      60     Who has 172.16.60.1? Tell 172.16.60.254
+
+Frame 29: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 27.509012999   HewlettP_61:2f:4e     HewlettP_c5:61:bb     ARP      42     172.16.60.1 is at 00:21:5a:61:2f:4e
+
+Frame 30: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Address Resolution Protocol (reply)
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 27.581483520   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=6/1536, ttl=64 (reply in 32)
+
+Frame 31: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     32 27.581575080   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=6/1536, ttl=64 (request in 31)
+
+Frame 32: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 28.030856326   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 33: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     34 28.605486534   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=7/1792, ttl=64 (reply in 35)
+
+Frame 34: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     35 28.605582005   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=7/1792, ttl=64 (request in 34)
+
+Frame 35: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     36 29.629499535   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=8/2048, ttl=64 (reply in 37)
+
+Frame 36: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     37 29.629600314   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=8/2048, ttl=64 (request in 36)
+
+Frame 37: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     38 30.033087438   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 38: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     39 30.657509634   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=9/2304, ttl=64 (reply in 40)
+
+Frame 39: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     40 30.657621309   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=9/2304, ttl=64 (request in 39)
+
+Frame 40: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     41 31.677510941   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=10/2560, ttl=64 (reply in 42)
+
+Frame 41: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     42 31.677617797   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=10/2560, ttl=64 (request in 41)
+
+Frame 42: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     43 32.035310448   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 43: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     44 32.701484413   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=11/2816, ttl=64 (reply in 45)
+
+Frame 44: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     45 32.701609147   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=11/2816, ttl=64 (request in 44)
+
+Frame 45: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     46 33.725483795   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=12/3072, ttl=64 (reply in 47)
+
+Frame 46: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     47 33.725580803   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=12/3072, ttl=64 (request in 46)
+
+Frame 47: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     48 34.037484220   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 48: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     49 34.749490162   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=13/3328, ttl=64 (reply in 50)
+
+Frame 49: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     50 34.749598065   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=13/3328, ttl=64 (request in 49)
+
+Frame 50: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     51 35.773489684   172.16.60.1           172.16.60.254         ICMP     98     Echo (ping) request  id=0x0593, seq=14/3584, ttl=64 (reply in 52)
+
+Frame 51: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_61:2f:4e (00:21:5a:61:2f:4e), Dst: HewlettP_c5:61:bb (00:21:5a:c5:61:bb)
+Internet Protocol Version 4, Src: 172.16.60.1, Dst: 172.16.60.254
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     52 35.773588368   172.16.60.254         172.16.60.1           ICMP     98     Echo (ping) reply    id=0x0593, seq=14/3584, ttl=64 (request in 51)
+
+Frame 52: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface 0
+Ethernet II, Src: HewlettP_c5:61:bb (00:21:5a:c5:61:bb), Dst: HewlettP_61:2f:4e (00:21:5a:61:2f:4e)
+Internet Protocol Version 4, Src: 172.16.60.254, Dst: 172.16.60.1
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     53 36.039716030   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 53: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     54 36.537329115   192.168.88.1          255.255.255.255       MNDP     188    5678 → 5678 Len=146
+
+Frame 54: 188 bytes on wire (1504 bits), 188 bytes captured (1504 bits) on interface 0
+Ethernet II, Src: Routerbo_1c:8b:e5 (c4:ad:34:1c:8b:e5), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Internet Protocol Version 4, Src: 192.168.88.1, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 5678, Dst Port: 5678
+Mikrotik Neighbor Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     55 36.537391762   Routerbo_1c:8b:e5     CDP/VTP/DTP/PAgP/UDLD CDP      131    Device ID: MikroTik  Port ID: bridge/ether3  
+
+Frame 55: 131 bytes on wire (1048 bits), 131 bytes captured (1048 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Cisco Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     56 36.537461043   Routerbo_1c:8b:e5     LLDP_Multicast        LLDP     145    TTL = 120 System Name = MikroTik System Description = MikroTik RouterOS 7.1.1 (stable) Dec/21/2021 11:53:05 CRS326-24G-2S+ 
+
+Frame 56: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits) on interface 0
+Ethernet II, Src: Routerbo_1c:8b:e5 (c4:ad:34:1c:8b:e5), Dst: LLDP_Multicast (01:80:c2:00:00:0e)
+Link Layer Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     57 38.041843009   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 57: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     58 40.044065740   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 58: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     59 42.046304115   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 59: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     60 44.048538369   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 60: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     61 46.050724433   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 61: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     62 48.052956103   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 62: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     63 50.055202300   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 63: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     64 52.057358613   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 64: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     65 54.059585673   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 65: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     66 56.061682272   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 66: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     67 58.063906888   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 67: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     68 60.066143727   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 68: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     69 62.068377492   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 69: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     70 64.070574451   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 70: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     71 66.072817715   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 71: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     72 68.075053017   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 72: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     73 70.077212332   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 73: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     74 72.079446936   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 74: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     75 74.081560855   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 75: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     76 76.083794550   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 76: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     77 78.086040049   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 77: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     78 80.088273046   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 78: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     79 82.090433549   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 79: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     80 84.092670177   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 80: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     81 86.094911905   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 81: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     82 88.097068985   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 82: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     83 90.099298560   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 83: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     84 92.101399140   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 84: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     85 94.103623756   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 85: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     86 96.105874632   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 86: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     87 96.538348399   192.168.88.1          255.255.255.255       MNDP     188    5678 → 5678 Len=146
+
+Frame 87: 188 bytes on wire (1504 bits), 188 bytes captured (1504 bits) on interface 0
+Ethernet II, Src: Routerbo_1c:8b:e5 (c4:ad:34:1c:8b:e5), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Internet Protocol Version 4, Src: 192.168.88.1, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 5678, Dst Port: 5678
+Mikrotik Neighbor Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     88 96.538410697   Routerbo_1c:8b:e5     CDP/VTP/DTP/PAgP/UDLD CDP      131    Device ID: MikroTik  Port ID: bridge/ether3  
+
+Frame 88: 131 bytes on wire (1048 bits), 131 bytes captured (1048 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Cisco Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     89 96.538477814   Routerbo_1c:8b:e5     LLDP_Multicast        LLDP     145    TTL = 120 System Name = MikroTik System Description = MikroTik RouterOS 7.1.1 (stable) Dec/21/2021 11:53:05 CRS326-24G-2S+ 
+
+Frame 89: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits) on interface 0
+Ethernet II, Src: Routerbo_1c:8b:e5 (c4:ad:34:1c:8b:e5), Dst: LLDP_Multicast (01:80:c2:00:00:0e)
+Link Layer Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     90 98.108107280   Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 90: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     91 100.110296557  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 91: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     92 102.112534303  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 92: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     93 104.114774703  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 93: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     94 106.116944705  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 94: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     95 108.119174978  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 95: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     96 110.121286592  Routerbo_1c:8b:e5     Spanning-tree-(for-bridges)_00 STP      60     RST. Root = 32768/0/c4:ad:34:1c:8b:e3  Cost = 0  Port = 0x0003
+
+Frame 96: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
