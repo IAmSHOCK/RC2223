@@ -18,6 +18,7 @@
 #define SERVER_PORT 21
 
 // Example of input: ./run ftp://[<user>:<password>@]<host>/<url-path>
+// Example of input: ./run ftp://rcom:rcom@netlab1.fe.up.pt/pipe.txt
 void parseInputString(char *input, char *user, char *password, char *host, char *url_path)
 {
 
@@ -312,7 +313,6 @@ int main(int argc, char **argv)
 
 	parseFile(url_path, strlen(url_path), filename);
 
-	// Testing the values -> Tested and works fine
 	printf("\nUser: %s\n", user);
 	printf("Password: %s\n", password);
 	printf("Host: %s\n", host);
