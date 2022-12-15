@@ -42,8 +42,8 @@ ifconfig eth1 172.16.61.253/24 (in tux64)
 echo 1 > /proc/sys/net/ipv4/ip_forward (tux64)
 echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts (tux64)
 
-route add -net 172.16.61.0/24 gw 172.16.60.254 (in tux63)
-route add -net 172.16.60.0/24 gw 172.16.61.253 (in tux62)
+route add -net 172.16.61.1/24 gw 172.16.60.254 (in tux63)
+route add -net 172.16.60.1/24 gw 172.16.61.253 (in tux62)
 
 # Exp 4:
 reset router:
@@ -56,7 +56,7 @@ In router gtkterm add ip address of eth1 (connected to 6.1) and eth2 (connected 
 In switch gtkterm add router eth2 (the one connected to the swtich) to bridge61
 /interface bridge port remove [find interface =ether5]
 /interface bridge port add bridge=bridge61 interface=ether5
-/ip route add dst-address=172.16.60.0/24 gateway=172.16.61.253
+/ip route add dst-address=172.16.60.1/24 gateway=172.16.61.253
 /ip route add dst-address=0.0.0.0/0 gateway=172.16.1.254
 
 in tux63:
