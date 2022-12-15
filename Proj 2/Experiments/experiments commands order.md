@@ -1,3 +1,10 @@
+- remove cables except one from tux6X to T3
+- In console: systemctl restart networking
+- In tux6X's serial port terminal:
+    change baudrate to 115200
+    /system reset-configuration
+
+
 # Exp 1:
 (ligar e0 ao switch do t63 e do t64)
 ifconfig eth0 up
